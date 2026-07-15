@@ -185,6 +185,10 @@
   /* ---------- WORK / BEFORE-AFTER ---------- */
   .work{background:var(--bg-2);border-top:1px solid var(--line-soft)}
   .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .ba-single{max-width:860px;margin:0 auto}
+  .ba-photo{aspect-ratio:16/10}
+  .ba-photo .layer{background-size:cover;background-position:center}
+  .ba-photo .before{filter:none}
   .ba{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;cursor:ew-resize;user-select:none;touch-action:none}
   .ba .layer{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px}
   .ba .after{background:
@@ -452,7 +456,7 @@
         <div class="why-item reveal"><div class="n">04</div><div><h4 data-i18n="why.4.t">Odbiór i auto zastępcze</h4><p data-i18n="why.4.d">Podjedziemy po Twój samochód, a na czas prac zaproponujemy auto zastępcze.</p></div></div>
       </div>
     </div>
-    <div class="why-visual reveal">
+    <div class="why-visual reveal" style="background-image:linear-gradient(to top,rgba(7,7,8,.82),rgba(7,7,8,.15) 55%),url('assets/why.jpg');background-size:cover;background-position:center">
       <div class="badge">
         <div class="big gold-text">100%</div>
         <div class="sm" data-i18n="why.badge">Satysfakcji albo poprawiamy</div>
@@ -497,15 +501,10 @@
       <h2 data-i18n="work.title">Zobacz różnicę</h2>
       <p data-i18n="work.sub">Przeciągnij suwak i zobacz metamorfozę. Przed i po pracach naszego studia.</p>
     </div>
-    <div class="ba-grid">
-      <div class="ba reveal" data-ba>
-        <div class="layer after"><span class="lbl" data-i18n="work.after">Po</span></div>
-        <div class="layer before" data-before><span class="lbl" data-i18n="work.before">Przed</span></div>
-        <div class="handle" data-handle></div>
-      </div>
-      <div class="ba reveal" data-ba>
-        <div class="layer after"><span class="lbl" data-i18n="work.after">Po</span></div>
-        <div class="layer before" data-before><span class="lbl" data-i18n="work.before">Przed</span></div>
+    <div class="ba-single">
+      <div class="ba ba-photo reveal" data-ba>
+        <div class="layer after" style="background:url('assets/po.jpg') center/cover"><span class="lbl" data-i18n="work.after">Po</span></div>
+        <div class="layer before" data-before style="background:url('assets/przed.jpg') center/cover;filter:none"><span class="lbl" data-i18n="work.before">Przed</span></div>
         <div class="handle" data-handle></div>
       </div>
     </div>
