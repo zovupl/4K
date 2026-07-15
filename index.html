@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23090909'/%3E%3Ctext x='50' y='72' font-family='Oswald,Arial' font-weight='700' font-size='58' text-anchor='middle' fill='%23D4AF37'%3E4K%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/jpeg" href="assets/logo-4k.jpg">
 <style>
   :root{
     color-scheme: dark;
@@ -60,9 +60,12 @@
   header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,border-color .4s,padding .4s;border-bottom:1px solid transparent;padding:20px 0}
   header.nav.scrolled{background:rgba(8,8,9,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line-soft);padding:12px 0}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
-  .logo svg{height:38px;width:auto;display:block}
-  .logo .tag{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.2;border-left:1px solid var(--line);padding-left:12px}
+  .logo{display:flex;align-items:center;gap:13px;flex-shrink:0}
+  .logo-img{height:52px;width:52px;object-fit:cover;border-radius:50%;display:block;mix-blend-mode:screen;transition:height .4s,width .4s}
+  header.nav.scrolled .logo-img{height:44px;width:44px}
+  .logo .tag{display:flex;flex-direction:column;font-family:'Oswald',sans-serif;letter-spacing:2.5px;text-transform:uppercase;line-height:1.15;border-left:1px solid var(--line);padding-left:13px}
+  .logo .tag b{font-size:19px;font-weight:700;letter-spacing:2px;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .logo .tag span{font-size:9.5px;color:var(--muted);letter-spacing:3px}
   nav.links{display:flex;gap:30px}
   nav.links a{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative}
   nav.links a:hover{color:var(--gold-bright)}
@@ -81,7 +84,8 @@
   .hero-bg .g1{width:620px;height:620px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(212,175,55,.32),transparent 70%)}
   .hero-bg .g2{width:520px;height:520px;bottom:-200px;left:-140px;background:radial-gradient(circle,rgba(212,175,55,.14),transparent 70%)}
   .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%)}
-  .hero-watermark{position:absolute;right:-2%;bottom:-8%;font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(280px,42vw,680px);line-height:.8;color:rgba(212,175,55,.04);z-index:0;letter-spacing:-8px;pointer-events:none;user-select:none}
+  .hero-emblem{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:min(50vw,600px);z-index:1;mix-blend-mode:screen;pointer-events:none;user-select:none;filter:drop-shadow(0 0 60px rgba(212,175,55,.28));animation:emblemFloat 7s ease-in-out infinite}
+  @keyframes emblemFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 14px))}}
   .hero-inner{position:relative;z-index:2;max-width:800px}
   .hero h1{font-size:clamp(44px,7.5vw,92px);text-transform:uppercase;margin:22px 0 22px;font-weight:700}
   .hero h1 .l2{display:block}
@@ -233,6 +237,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:960px){
+    .hero-emblem{right:50%;transform:translate(50%,-50%);width:min(78vw,460px);opacity:.16;z-index:0;animation:none}
     .why-grid,.contact-grid{grid-template-columns:1fr}
     .why-visual{aspect-ratio:16/10;order:-1}
     .services-grid,.price-grid,.rev-grid{grid-template-columns:1fr 1fr}
@@ -261,18 +266,8 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="logo" aria-label="4K">
-      <svg viewBox="0 0 132 46" role="img" aria-label="4K logo">
-        <defs>
-          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#F6E3A0"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#A9812A"/>
-          </linearGradient>
-        </defs>
-        <!-- hidden ₿ bars motif -->
-        <rect x="44" y="0" width="3" height="46" fill="url(#lg)" opacity=".9"/>
-        <rect x="52" y="0" width="3" height="46" fill="url(#lg)" opacity=".9"/>
-        <text x="0" y="37" font-family="Oswald,Arial" font-weight="700" font-size="44" fill="url(#lg)" letter-spacing="1">4K</text>
-      </svg>
-      <span class="tag" data-i18n="brand.tag">Auto<br>Detailing</span>
+      <img src="assets/logo-4k.jpg" alt="4K" class="logo-img">
+      <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Detailing</span></span>
     </a>
     <nav class="links" id="navlinks">
       <a href="#services" data-i18n="nav.services">Usługi</a>
@@ -300,7 +295,8 @@
   <div class="hero-bg">
     <div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
   </div>
-  <div class="hero-watermark">4K</div>
+  <img src="assets/logo-4k.jpg" class="hero-emblem" alt="4K">
+
   <div class="wrap hero-inner">
     <span class="eyebrow reveal" data-i18n="hero.eyebrow">Certyfikowane studio detailingu</span>
     <h1 class="reveal" data-i18n-html="hero.h1">Twoje auto<span class="l2 gold-text">w rozdzielczości 4K.</span></h1>
@@ -578,7 +574,8 @@
     <div class="foot-top">
       <div class="foot-brand">
         <div class="logo">
-          <svg viewBox="0 0 132 46" style="height:34px"><rect x="44" y="0" width="3" height="46" fill="#D4AF37" opacity=".9"/><rect x="52" y="0" width="3" height="46" fill="#D4AF37" opacity=".9"/><text x="0" y="37" font-family="Oswald,Arial" font-weight="700" font-size="44" fill="#D4AF37">4K</text></svg>
+          <img src="assets/logo-4k.jpg" alt="4K" style="height:64px;width:64px;border-radius:50%;mix-blend-mode:screen">
+          <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Detailing</span></span>
         </div>
         <p data-i18n="foot.about">Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.</p>
       </div>
@@ -616,7 +613,7 @@
 /* ============ i18n ============ */
 const I18N={
   pl:{
-    "brand.tag":"Auto<br>Detailing",
+    "brand.tag":"Auto Detailing",
     "nav.services":"Usługi","nav.why":"Dlaczego 4K","nav.work":"Realizacje","nav.pricing":"Cennik","nav.reviews":"Opinie","nav.contact":"Kontakt","nav.cta":"Umów wizytę",
     "hero.eyebrow":"Certyfikowane studio detailingu",
     "hero.h1":"Twoje auto<span class='l2 gold-text'>w rozdzielczości 4K.</span>",
@@ -662,7 +659,7 @@ const I18N={
     "foot.about":"Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.","foot.nav":"Nawigacja","foot.services":"Usługi","foot.contact":"Kontakt","foot.rights":"Wszelkie prawa zastrzeżone.","foot.zovu":"Realizacja: <b>ZOVU</b> Creative Agency"
   },
   ru:{
-    "brand.tag":"Авто<br>Детейлинг",
+    "brand.tag":"Авто Детейлинг",
     "nav.services":"Услуги","nav.why":"Почему 4K","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.contact":"Контакты","nav.cta":"Записаться",
     "hero.eyebrow":"Сертифицированная студия детейлинга",
     "hero.h1":"Твоё авто<span class='l2 gold-text'>в разрешении 4K.</span>",
@@ -708,7 +705,7 @@ const I18N={
     "foot.about":"Студия премиум-детейлинга. Покрытия, полировка лака, PPF и уход за салоном с гарантией письменно.","foot.nav":"Навигация","foot.services":"Услуги","foot.contact":"Контакты","foot.rights":"Все права защищены.","foot.zovu":"Реализация: <b>ZOVU</b> Creative Agency"
   },
   en:{
-    "brand.tag":"Auto<br>Detailing",
+    "brand.tag":"Auto Detailing",
     "nav.services":"Services","nav.why":"Why 4K","nav.work":"Gallery","nav.pricing":"Pricing","nav.reviews":"Reviews","nav.contact":"Contact","nav.cta":"Book now",
     "hero.eyebrow":"Certified detailing studio",
     "hero.h1":"Your car<span class='l2 gold-text'>in 4K resolution.</span>",
