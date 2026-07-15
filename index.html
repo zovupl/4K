@@ -114,7 +114,8 @@
   .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%)}
   .hero-emblem{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:min(50vw,600px);z-index:1;pointer-events:none;user-select:none;filter:drop-shadow(0 0 70px rgba(212,175,55,.35));animation:emblemFloat 7s ease-in-out infinite}
   @keyframes emblemFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 14px))}}
-  .hero-inner{position:relative;z-index:2;max-width:800px}
+  .hero-inner{position:relative;z-index:2;max-width:100%}
+  .hero h1{max-width:800px}
   .hero h1{font-size:clamp(44px,7.5vw,92px);text-transform:uppercase;margin:22px 0 22px;font-weight:700}
   .hero h1 .l2{display:block}
   .hero p.lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:600px;margin-bottom:36px}
@@ -165,12 +166,21 @@
   .why-visual .badge .sm{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;font-family:'Oswald',sans-serif}
 
   /* ---------- PROCESS ---------- */
-  .proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:step;margin-top:10px}
-  .proc{padding:32px 22px;border-left:1px solid var(--line-soft);position:relative}
-  .proc:first-child{border-left:none}
-  .proc .pn{font-family:'Oswald',sans-serif;font-weight:700;font-size:15px;color:#1a1408;background:var(--grad-gold);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:20px;position:relative}
+  .proc-grid::before{content:"";position:absolute;top:46px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.5) 15%,rgba(212,175,55,.5) 85%,transparent);z-index:0}
+  .proc{padding:0 20px;position:relative;z-index:1;text-align:center}
+  .proc .pn{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;color:#1a1408;background:var(--grad-gold);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;box-shadow:0 0 0 6px var(--bg),0 8px 26px -6px rgba(212,175,55,.6);position:relative}
   .proc h4{font-family:'Oswald',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
   .proc p{color:var(--muted);font-size:14.5px}
+  /* guarantee banner */
+  .gbanner{margin-top:60px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:space-between;padding:34px 40px;border-radius:22px;border:1px solid var(--gold);background:linear-gradient(120deg,rgba(212,175,55,.14),rgba(212,175,55,.03) 60%);position:relative;overflow:hidden}
+  .gbanner::before{content:"";position:absolute;top:-60%;right:-10%;width:50%;height:220%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.08) 50%,transparent 60%)}
+  .gbanner .gb-l{display:flex;align-items:center;gap:22px;position:relative;z-index:1}
+  .gbanner .gb-ic{width:64px;height:64px;flex-shrink:0;border-radius:16px;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -10px rgba(212,175,55,.6)}
+  .gbanner .gb-ic svg{width:34px;height:34px;color:#1a1408}
+  .gbanner h3{font-size:clamp(22px,3vw,30px);text-transform:uppercase;margin-bottom:6px}
+  .gbanner p{color:var(--muted);font-size:15px;max-width:520px}
+  .gbanner .btn{position:relative;z-index:1;flex-shrink:0}
 
   /* ---------- WORK / BEFORE-AFTER ---------- */
   .work{background:var(--bg-2);border-top:1px solid var(--line-soft)}
@@ -297,9 +307,11 @@
     .why-grid,.contact-grid{grid-template-columns:1fr}
     .why-visual{aspect-ratio:16/10;order:-1}
     .services-grid,.price-grid,.rev-grid{grid-template-columns:1fr 1fr}
-    .proc-grid{grid-template-columns:1fr 1fr}
-    .proc{border-left:none;border-top:1px solid var(--line-soft);padding:26px 4px}
-    .proc:first-child{border-top:none}
+    .proc-grid{grid-template-columns:1fr 1fr;gap:32px 12px}
+    .proc-grid::before{display:none}
+    .proc{padding:0 6px}
+    .gbanner{flex-direction:column;text-align:center;align-items:center;padding:30px 24px}
+    .gbanner .gb-l{flex-direction:column;text-align:center}
   }
   @media(max-width:760px){
     nav.links,.nav-right .lang.desktop{display:none}
@@ -389,16 +401,6 @@
   </div>
 </section>
 
-<!-- ============ BRANDS ============ -->
-<section class="brands">
-  <div class="wrap">
-    <span class="brands-label" data-i18n="brands.label">Pracujemy na sprzęcie i chemii klasy premium</span>
-    <div class="brand-row">
-      <span>BOSCH</span><span>Castrol</span><span>MANN-FILTER</span><span>Continental</span><span>Valeo</span><span>ZF</span>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SERVICES ============ -->
 <section class="section" id="services">
   <div class="wrap">
@@ -411,39 +413,27 @@
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M6 11h3l1.5-3 2 6 1.5-3H18"/><path d="M9 21h6M12 18v3"/></svg></div>
         <h3 data-i18n="svc.1.t">Diagnostyka komputerowa</h3>
-        <p data-i18n="svc.1.d">Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.</p>
-        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
-      </div>
+        <p data-i18n="svc.1.d">Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.</p>      </div>
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
         <h3 data-i18n="svc.2.t">Mechanika i naprawy</h3>
-        <p data-i18n="svc.2.d">Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.</p>
-        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
-      </div>
+        <p data-i18n="svc.2.d">Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.</p>      </div>
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9z"/><path d="M8 12l2.5 2.5L16 9"/></svg></div>
         <h3 data-i18n="svc.3.t">Przeglądy i obsługa</h3>
-        <p data-i18n="svc.3.d">Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.</p>
-        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
-      </div>
+        <p data-i18n="svc.3.d">Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.</p>      </div>
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 6.6 6 11a6 6 0 01-12 0c0-4.4 6-11 6-11z"/></svg></div>
         <h3 data-i18n="svc.4.t">Wymiana oleju i filtrów</h3>
-        <p data-i18n="svc.4.d">Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.</p>
-        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
-      </div>
+        <p data-i18n="svc.4.d">Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.</p>      </div>
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></svg></div>
         <h3 data-i18n="svc.5.t">Serwis opon</h3>
-        <p data-i18n="svc.5.d">Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.</p>
-        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
-      </div>
+        <p data-i18n="svc.5.d">Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.</p>      </div>
       <div class="svc reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M4 6l16 12M20 6L4 18M3 12h18"/></svg></div>
         <h3 data-i18n="svc.6.t">Klimatyzacja i elektryka</h3>
-        <p data-i18n="svc.6.d">Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.</p>
-        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
-      </div>
+        <p data-i18n="svc.6.d">Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.</p>      </div>
     </div>
   </div>
 </section>
@@ -484,7 +474,17 @@
       <div class="proc reveal"><div class="pn">2</div><h4 data-i18n="proc.2.t">Bezpieczne mycie</h4><p data-i18n="proc.2.d">Dekontaminacja chemiczna i mechaniczna, mycie bezdotykowe i ręczne.</p></div>
       <div class="proc reveal"><div class="pn">3</div><h4 data-i18n="proc.3.t">Korekta i przygotowanie</h4><p data-i18n="proc.3.d">Polerka usuwa wady, powierzchnia zostaje odtłuszczona pod powłokę.</p></div>
       <div class="proc reveal"><div class="pn">4</div><h4 data-i18n="proc.4.t">Aplikacja ochrony</h4><p data-i18n="proc.4.d">Nakładamy powłokę ceramiczną lub folię PPF w kontrolowanych warunkach.</p></div>
-      <div class="proc reveal"><div class="pn">5</div><h4 data-i18n="proc.5.t">Kontrola i odbiór</h4><p data-i18n="proc.5.d">Kontrola jakości, karta gwarancyjna i przekazanie auta w pełnym blasku.</p></div>
+      <div class="proc reveal"><div class="pn">5</div><h4 data-i18n="proc.5.t">Odbiór z gwarancją</h4><p data-i18n="proc.5.d">Wydajemy auto z kartą gwarancyjną i pełną historią wykonanych prac.</p></div>
+    </div>
+    <div class="gbanner reveal">
+      <div class="gb-l">
+        <div class="gb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div>
+          <h3 data-i18n="gb.title">Gwarancja na piśmie — na każdą naprawę</h3>
+          <p data-i18n="gb.sub">Nie tylko obiecujemy. Każdą usługę i część potwierdzamy kartą gwarancyjną z historią prac. Coś nie tak? Poprawiamy na nasz koszt.</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-gold" data-i18n="nav.cta">Umów wizytę</a>
     </div>
   </div>
 </section>
@@ -530,7 +530,7 @@
       <div class="plan reveal">
         <h3 data-i18n="plan.1.t">Start</h3>
         <p class="desc" data-i18n="plan.1.d">Detailingowe mycie i odświeżenie na już.</p>
-        <div class="price gold-text">99 zł</div>
+        <div class="price gold-text">120 zł</div>
         <span style="color:var(--muted);font-size:13px" data-i18n="plan.from">cena od</span>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.1.f1">Mycie metodą dwóch wiader</span></li>
@@ -544,7 +544,7 @@
         <span class="flag" data-i18n="plan.popular">Najczęściej wybierany</span>
         <h3 data-i18n="plan.2.t">Premium</h3>
         <p class="desc" data-i18n="plan.2.d">Korekta lakieru i powłoka ceramiczna.</p>
-        <div class="price gold-text">299 zł</div>
+        <div class="price gold-text">349 zł</div>
         <span style="color:var(--muted);font-size:13px" data-i18n="plan.from">cena od</span>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.2.f1">Wszystko z pakietu Start</span></li>
@@ -753,8 +753,9 @@ const I18N={
     "proc.3.t":"Naprawa","proc.3.d":"Wykonujemy serwis na sprawdzonych częściach, zgodnie z ustaleniami i sztuką.",
     "proc.4.t":"Kontrola jakości","proc.4.d":"Testujemy efekt i sprawdzamy bezpieczeństwo auta przed wydaniem.",
     "proc.5.t":"Odbiór z gwarancją","proc.5.d":"Wydajemy auto z kartą gwarancyjną i pełną historią wykonanych prac.",
+    "gb.title":"Gwarancja na piśmie — na każdą naprawę","gb.sub":"Nie tylko obiecujemy. Każdą usługę i część potwierdzamy kartą gwarancyjną z historią prac. Coś nie tak? Poprawiamy na nasz koszt.",
     "work.eyebrow":"Realizacje","work.title":"Nasze realizacje","work.sub":"Zobacz, jak wygląda auto przed i po serwisie w naszym warsztacie.","work.before":"Przed","work.after":"Po",
-    "price.eyebrow":"Cennik","price.title":"Cennik usług","price.sub":"Przejrzyste ceny najczęstszych usług. Koszt naprawy zawsze potwierdzamy wyceną przed rozpoczęciem prac.",
+    "price.eyebrow":"Cennik","price.title":"Cennik usług","price.sub":"Przejrzyste ceny najczęstszych usług. Stawka roboczogodziny od 160 zł. Koszt naprawy zawsze potwierdzamy wyceną przed rozpoczęciem prac.",
     "plan.from":"cena od","plan.popular":"Najczęściej wybierany","plan.cta":"Umów wizytę",
     "plan.1.t":"Diagnostyka","plan.1.d":"Pełne badanie i odczyt błędów.","plan.1.f1":"Diagnostyka komputerowa","plan.1.f2":"Odczyt i kasowanie błędów","plan.1.f3":"Ocena stanu technicznego","plan.1.f4":"Raport i rekomendacje",
     "plan.2.t":"Przegląd okresowy","plan.2.d":"Sezonowa obsługa Twojego auta.","plan.2.f1":"Wszystko z Diagnostyki","plan.2.f2":"Wymiana oleju i filtra","plan.2.f3":"Kontrola płynów i hamulców","plan.2.f4":"Gwarancja na wykonane prace",
@@ -808,8 +809,9 @@ const I18N={
     "proc.3.t":"Ремонт","proc.3.d":"Выполняем сервис на проверенных запчастях, по согласованию и по правилам.",
     "proc.4.t":"Контроль качества","proc.4.d":"Тестируем результат и проверяем безопасность авто перед выдачей.",
     "proc.5.t":"Выдача с гарантией","proc.5.d":"Отдаём авто с гарантийной картой и полной историей выполненных работ.",
+    "gb.title":"Гарантия письменно — на каждый ремонт","gb.sub":"Мы не просто обещаем. Каждую услугу и запчасть подтверждаем гарантийной картой с историей работ. Что-то не так? Переделаем за наш счёт.",
     "work.eyebrow":"Работы","work.title":"Наши работы","work.sub":"Посмотрите, как выглядит авто до и после сервиса в нашей мастерской.","work.before":"До","work.after":"После",
-    "price.eyebrow":"Цены","price.title":"Цены на услуги","price.sub":"Прозрачные цены на частые услуги. Стоимость ремонта всегда подтверждаем сметой до начала работ.",
+    "price.eyebrow":"Цены","price.title":"Цены на услуги","price.sub":"Прозрачные цены на частые услуги. Ставка нормо-часа от 160 zł. Стоимость ремонта всегда подтверждаем сметой до начала работ.",
     "plan.from":"цена от","plan.popular":"Выбирают чаще всего","plan.cta":"Записаться",
     "plan.1.t":"Диагностика","plan.1.d":"Полная проверка и считывание ошибок.","plan.1.f1":"Компьютерная диагностика","plan.1.f2":"Считывание и сброс ошибок","plan.1.f3":"Оценка технического состояния","plan.1.f4":"Отчёт и рекомендации",
     "plan.2.t":"Периодическое ТО","plan.2.d":"Сезонное обслуживание вашего авто.","plan.2.f1":"Всё из Диагностики","plan.2.f2":"Замена масла и фильтра","plan.2.f3":"Проверка жидкостей и тормозов","plan.2.f4":"Гарантия на выполненные работы",
@@ -863,8 +865,9 @@ const I18N={
     "proc.3.t":"Repair","proc.3.d":"We carry out the service on proven parts, as agreed and by the book.",
     "proc.4.t":"Quality control","proc.4.d":"We test the result and check the car's safety before handover.",
     "proc.5.t":"Handover with warranty","proc.5.d":"We return your car with a warranty card and a full record of the work.",
+    "gb.title":"A written warranty — on every repair","gb.sub":"We don't just promise. Every service and part is confirmed with a warranty card and a record of the work. Something wrong? We fix it at our cost.",
     "work.eyebrow":"Our work","work.title":"Our work","work.sub":"See how a car looks before and after a service at our workshop.","work.before":"Before","work.after":"After",
-    "price.eyebrow":"Pricing","price.title":"Service pricing","price.sub":"Transparent prices for common services. Repair costs are always confirmed with a quote before we start.",
+    "price.eyebrow":"Pricing","price.title":"Service pricing","price.sub":"Transparent prices for common services. Labour rate from 160 zł/h. Repair costs are always confirmed with a quote before we start.",
     "plan.from":"from","plan.popular":"Most popular","plan.cta":"Book now",
     "plan.1.t":"Diagnostics","plan.1.d":"Full check and fault-code reading.","plan.1.f1":"Computer diagnostics","plan.1.f2":"Fault-code read & reset","plan.1.f3":"Technical condition assessment","plan.1.f4":"Report and recommendations",
     "plan.2.t":"Periodic service","plan.2.d":"Seasonal servicing for your car.","plan.2.f1":"Everything in Diagnostics","plan.2.f2":"Oil and filter change","plan.2.f3":"Fluids and brakes check","plan.2.f4":"Warranty on the work done",
