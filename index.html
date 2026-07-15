@@ -111,6 +111,13 @@
   .hero-bg .glow{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
   .hero-bg .g1{width:620px;height:620px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(212,175,55,.32),transparent 70%)}
   .hero-bg .g2{width:520px;height:520px;bottom:-200px;left:-140px;background:radial-gradient(circle,rgba(212,175,55,.14),transparent 70%)}
+  .hero-bg .g3,.hero-bg .g4{display:none}
+  @media(min-width:961px){
+    .hero-bg .g1{width:600px;height:600px;top:-150px;right:-110px;background:radial-gradient(circle,rgba(212,175,55,.28),transparent 70%)}
+    .hero-bg .g2{width:600px;height:600px;top:auto;bottom:-150px;left:-110px;background:radial-gradient(circle,rgba(212,175,55,.28),transparent 70%)}
+    .hero-bg .g3{display:block;width:600px;height:600px;top:-150px;left:-110px;background:radial-gradient(circle,rgba(212,175,55,.28),transparent 70%)}
+    .hero-bg .g4{display:block;width:600px;height:600px;bottom:-150px;right:-110px;background:radial-gradient(circle,rgba(212,175,55,.28),transparent 70%)}
+  }
   .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%)}
   .hero-emblem{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(64vw,720px);z-index:0;opacity:.2;pointer-events:none;user-select:none;filter:drop-shadow(0 0 70px rgba(212,175,55,.2))}
   .hero-inner{position:relative;z-index:2;width:100%;max-width:1200px}
@@ -306,9 +313,9 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:960px){
-    .hero-emblem{right:50%;transform:translate(50%,-50%);width:min(78vw,460px);opacity:.16;z-index:0;animation:none}
+    .hero-emblem{left:50%;right:auto;transform:translate(-50%,-50%);width:min(82vw,430px);opacity:.16;z-index:0}
     .why-grid,.contact-grid{grid-template-columns:1fr}
-    .why-visual{aspect-ratio:16/10;order:-1}
+    .why-visual{aspect-ratio:16/10}
     .services-grid,.price-grid,.rev-grid{grid-template-columns:1fr 1fr}
     .proc-grid{grid-template-columns:1fr 1fr;gap:32px 12px}
     .proc-grid::before{display:none}
@@ -373,7 +380,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
+    <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="glow g4"></div><div class="grid"></div>
   </div>
   <img src="assets/logo-4k.png" class="hero-emblem" alt="4K">
 
