@@ -231,6 +231,34 @@
   .foot-bottom .zovu{color:var(--muted)}
   .foot-bottom .zovu b{color:var(--gold)}
 
+  /* ---------- BRANDS ---------- */
+  .brands{background:var(--bg);border-bottom:1px solid var(--line-soft);padding:38px 0}
+  .brands .wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
+  .brands-label{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted-2)}
+  .brand-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px}
+  .brand-row span{font-family:'Oswald',sans-serif;font-weight:600;font-size:21px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:.65;transition:.3s}
+  .brand-row span:hover{color:var(--gold-bright);opacity:1}
+
+  /* ---------- CASE LABELS ---------- */
+  .shot{display:flex;align-items:flex-end;padding:16px}
+  .shot .cap{position:relative;z-index:2;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.5px;text-transform:uppercase;line-height:1.3}
+  .shot .cap b{display:block;color:var(--gold-bright);font-size:14px}
+  .shot .cap span{color:var(--muted)}
+
+  /* ---------- FAQ ---------- */
+  .faq-wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .faq{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;transition:border-color .3s}
+  .faq[open]{border-color:var(--line)}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Oswald',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.5px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .plus{color:var(--gold);font-size:24px;line-height:1;transition:transform .3s;flex-shrink:0}
+  .faq[open] summary .plus{transform:rotate(45deg)}
+  .faq .ans{padding:0 26px 24px;color:var(--muted);font-size:15.5px}
+
+  /* ---------- MAP ---------- */
+  .map-band{margin-top:56px;border-radius:22px;overflow:hidden;border:1px solid var(--line);position:relative;filter:grayscale(.3) contrast(1.05)}
+  .map-band iframe{display:block;width:100%;height:360px;border:0}
+
   /* ---------- REVEAL ---------- */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
@@ -275,6 +303,7 @@
       <a href="#work" data-i18n="nav.work">Realizacje</a>
       <a href="#pricing" data-i18n="nav.pricing">Cennik</a>
       <a href="#reviews" data-i18n="nav.reviews">Opinie</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contact" data-i18n="nav.contact">Kontakt</a>
       <div class="lang mobile-lang" style="margin-top:8px">
         <button data-lang="pl">PL</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
@@ -321,6 +350,16 @@
     <div class="stat reveal"><div class="num gold-text" data-count="12000" data-suffix="+">0</div><div class="lbl" data-i18n="stats.s2">Zadbanych aut</div></div>
     <div class="stat reveal"><div class="num gold-text" data-count="100" data-suffix="%">0</div><div class="lbl" data-i18n="stats.s3">Gwarancji na piśmie</div></div>
     <div class="stat reveal"><div class="num gold-text" data-count="4.9" data-decimals="1">0</div><div class="lbl" data-i18n="stats.s4">Średnia ocena</div></div>
+  </div>
+</section>
+
+<!-- ============ BRANDS ============ -->
+<section class="brands">
+  <div class="wrap">
+    <span class="brands-label" data-i18n="brands.label">Pracujemy na sprzęcie i chemii klasy premium</span>
+    <div class="brand-row">
+      <span>GYEON</span><span>Koch-Chemie</span><span>RUPES</span><span>XPEL</span><span>CarPro</span><span>3M</span>
+    </div>
   </div>
 </section>
 
@@ -435,7 +474,10 @@
       </div>
     </div>
     <div class="gallery">
-      <div class="shot s1 reveal"></div><div class="shot s2 reveal"></div><div class="shot s3 reveal"></div><div class="shot s4 reveal"></div>
+      <div class="shot s1 reveal"><span class="cap"><b>BMW M4</b><span data-i18n="case.1">Powłoka ceramiczna</span></span></div>
+      <div class="shot s2 reveal"><span class="cap"><b>Audi RS6</b><span data-i18n="case.2">Korekta lakieru</span></span></div>
+      <div class="shot s3 reveal"><span class="cap"><b>Porsche 911</b><span data-i18n="case.3">Folia PPF</span></span></div>
+      <div class="shot s4 reveal"><span class="cap"><b>Mercedes G63</b><span data-i18n="case.4">Detailing wnętrza</span></span></div>
     </div>
   </div>
 </section>
@@ -521,6 +563,24 @@
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+      <h2 data-i18n="faq.title">Najczęstsze pytania</h2>
+      <p data-i18n="faq.sub">Wszystko, co warto wiedzieć przed wizytą. Nie znalazłeś odpowiedzi? Zadzwoń.</p>
+    </div>
+    <div class="faq-wrap">
+      <details class="faq reveal"><summary><span data-i18n="faq.1.q">Ile trwa nałożenie powłoki ceramicznej?</span><span class="plus">+</span></summary><div class="ans" data-i18n="faq.1.a">Zwykle od 1 do 3 dni — w zależności od stanu lakieru i zakresu korekty. Dokładny czas potwierdzamy po diagnozie.</div></details>
+      <details class="faq reveal"><summary><span data-i18n="faq.2.q">Czy dostanę gwarancję na piśmie?</span><span class="plus">+</span></summary><div class="ans" data-i18n="faq.2.a">Tak. Każda powłoka i folia objęta jest pisemną gwarancją oraz kartą produktu z datą aplikacji i zakresem ochrony.</div></details>
+      <details class="faq reveal"><summary><span data-i18n="faq.3.q">Jak długo utrzymuje się powłoka ceramiczna?</span><span class="plus">+</span></summary><div class="ans" data-i18n="faq.3.a">Od 2 do 5 lat, zależnie od wybranego pakietu i pielęgnacji. Doradzimy wariant dopasowany do sposobu użytkowania auta.</div></details>
+      <details class="faq reveal"><summary><span data-i18n="faq.4.q">Czym różni się folia PPF od powłoki ceramicznej?</span><span class="plus">+</span></summary><div class="ans" data-i18n="faq.4.a">PPF to fizyczna, samoregenerująca się folia chroniąca przed odpryskami i zarysowaniami. Ceramika to powłoka dająca połysk i efekt hydrofobowy. Najlepszy efekt daje ich połączenie.</div></details>
+      <details class="faq reveal"><summary><span data-i18n="faq.5.q">Czy odbieracie auto i dajecie zastępcze?</span><span class="plus">+</span></summary><div class="ans" data-i18n="faq.5.a">Tak. Podjedziemy po Twój samochód na terenie miasta, a na czas prac zaproponujemy pojazd zastępczy.</div></details>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section class="section contact" id="contact">
   <div class="wrap contact-grid">
@@ -566,6 +626,12 @@
       <div class="form-note" id="formNote"></div>
     </form>
   </div>
+  <div class="wrap">
+    <div class="map-band reveal">
+      <iframe title="4K Auto Detailing — mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Warszawa%20detailing&output=embed"></iframe>
+    </div>
+  </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
@@ -578,6 +644,7 @@
           <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Detailing</span></span>
         </div>
         <p data-i18n="foot.about">Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.</p>
+        <p style="color:var(--muted-2);font-size:12.5px;margin-top:14px;letter-spacing:.3px" data-i18n="foot.company">4K Detailing Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
@@ -614,7 +681,16 @@
 const I18N={
   pl:{
     "brand.tag":"Auto Detailing",
-    "nav.services":"Usługi","nav.why":"Dlaczego 4K","nav.work":"Realizacje","nav.pricing":"Cennik","nav.reviews":"Opinie","nav.contact":"Kontakt","nav.cta":"Umów wizytę",
+    "nav.services":"Usługi","nav.why":"Dlaczego 4K","nav.work":"Realizacje","nav.pricing":"Cennik","nav.reviews":"Opinie","nav.faq":"FAQ","nav.contact":"Kontakt","nav.cta":"Umów wizytę",
+    "brands.label":"Pracujemy na sprzęcie i chemii klasy premium",
+    "case.1":"Powłoka ceramiczna","case.2":"Korekta lakieru","case.3":"Folia PPF","case.4":"Detailing wnętrza",
+    "faq.eyebrow":"FAQ","faq.title":"Najczęstsze pytania","faq.sub":"Wszystko, co warto wiedzieć przed wizytą. Nie znalazłeś odpowiedzi? Zadzwoń.",
+    "faq.1.q":"Ile trwa nałożenie powłoki ceramicznej?","faq.1.a":"Zwykle od 1 do 3 dni — w zależności od stanu lakieru i zakresu korekty. Dokładny czas potwierdzamy po diagnozie.",
+    "faq.2.q":"Czy dostanę gwarancję na piśmie?","faq.2.a":"Tak. Każda powłoka i folia objęta jest pisemną gwarancją oraz kartą produktu z datą aplikacji i zakresem ochrony.",
+    "faq.3.q":"Jak długo utrzymuje się powłoka ceramiczna?","faq.3.a":"Od 2 do 5 lat, zależnie od wybranego pakietu i pielęgnacji. Doradzimy wariant dopasowany do sposobu użytkowania auta.",
+    "faq.4.q":"Czym różni się folia PPF od powłoki ceramicznej?","faq.4.a":"PPF to fizyczna, samoregenerująca się folia chroniąca przed odpryskami i zarysowaniami. Ceramika to powłoka dająca połysk i efekt hydrofobowy. Najlepszy efekt daje ich połączenie.",
+    "faq.5.q":"Czy odbieracie auto i dajecie zastępcze?","faq.5.a":"Tak. Podjedziemy po Twój samochód na terenie miasta, a na czas prac zaproponujemy pojazd zastępczy.",
+    "foot.company":"4K Detailing Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000",
     "hero.eyebrow":"Certyfikowane studio detailingu",
     "hero.h1":"Twoje auto<span class='l2 gold-text'>w rozdzielczości 4K.</span>",
     "hero.lead":"Powłoki ceramiczne, korekta lakieru, folia PPF i pełny detailing wnętrza. Sprzęt oraz produkty klasy premium i gwarancja na piśmie.",
@@ -660,7 +736,16 @@ const I18N={
   },
   ru:{
     "brand.tag":"Авто Детейлинг",
-    "nav.services":"Услуги","nav.why":"Почему 4K","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.contact":"Контакты","nav.cta":"Записаться",
+    "nav.services":"Услуги","nav.why":"Почему 4K","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.faq":"FAQ","nav.contact":"Контакты","nav.cta":"Записаться",
+    "brands.label":"Работаем на оборудовании и химии премиум-класса",
+    "case.1":"Керамическое покрытие","case.2":"Полировка лака","case.3":"Плёнка PPF","case.4":"Детейлинг салона",
+    "faq.eyebrow":"FAQ","faq.title":"Частые вопросы","faq.sub":"Всё, что стоит знать перед визитом. Не нашли ответ? Позвоните.",
+    "faq.1.q":"Сколько длится нанесение керамики?","faq.1.a":"Обычно от 1 до 3 дней — в зависимости от состояния лака и объёма полировки. Точное время подтверждаем после диагностики.",
+    "faq.2.q":"Дадите гарантию письменно?","faq.2.a":"Да. Каждое покрытие и плёнка сопровождается письменной гарантией и картой продукта с датой нанесения и объёмом защиты.",
+    "faq.3.q":"Сколько держится керамическое покрытие?","faq.3.a":"От 2 до 5 лет, в зависимости от пакета и ухода. Подберём вариант под то, как вы используете авто.",
+    "faq.4.q":"Чем плёнка PPF отличается от керамики?","faq.4.a":"PPF — физическая самовосстанавливающаяся плёнка от сколов и царапин. Керамика — покрытие, дающее блеск и гидрофобность. Лучший эффект — их сочетание.",
+    "faq.5.q":"Забираете авто и даёте подменное?","faq.5.a":"Да. Заберём ваш автомобиль по городу, а на время работ предложим подменный.",
+    "foot.company":"4K Detailing Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000",
     "hero.eyebrow":"Сертифицированная студия детейлинга",
     "hero.h1":"Твоё авто<span class='l2 gold-text'>в разрешении 4K.</span>",
     "hero.lead":"Керамические покрытия, полировка лака, плёнка PPF и полный детейлинг салона. Оборудование и материалы премиум-класса, гарантия в письменном виде.",
@@ -706,7 +791,16 @@ const I18N={
   },
   en:{
     "brand.tag":"Auto Detailing",
-    "nav.services":"Services","nav.why":"Why 4K","nav.work":"Gallery","nav.pricing":"Pricing","nav.reviews":"Reviews","nav.contact":"Contact","nav.cta":"Book now",
+    "nav.services":"Services","nav.why":"Why 4K","nav.work":"Gallery","nav.pricing":"Pricing","nav.reviews":"Reviews","nav.faq":"FAQ","nav.contact":"Contact","nav.cta":"Book now",
+    "brands.label":"We work with premium-grade equipment and chemistry",
+    "case.1":"Ceramic coating","case.2":"Paint correction","case.3":"PPF film","case.4":"Interior detailing",
+    "faq.eyebrow":"FAQ","faq.title":"Frequently asked questions","faq.sub":"Everything worth knowing before your visit. Didn't find an answer? Call us.",
+    "faq.1.q":"How long does a ceramic coating take?","faq.1.a":"Usually 1 to 3 days — depending on the paint condition and correction scope. We confirm the exact time after diagnosis.",
+    "faq.2.q":"Do I get a written guarantee?","faq.2.a":"Yes. Every coating and film comes with a written warranty and a product card stating the application date and protection scope.",
+    "faq.3.q":"How long does a ceramic coating last?","faq.3.a":"From 2 to 5 years, depending on the package and care. We'll recommend the option that fits how you use your car.",
+    "faq.4.q":"How is PPF different from ceramic coating?","faq.4.a":"PPF is a physical, self-healing film protecting against chips and scratches. Ceramic is a coating that adds gloss and a hydrophobic effect. They work best combined.",
+    "faq.5.q":"Do you pick up the car and provide a courtesy vehicle?","faq.5.a":"Yes. We'll collect your car within the city and offer a courtesy vehicle while we work.",
+    "foot.company":"4K Detailing Ltd. · VAT 000-000-00-00 · Reg. 000000000",
     "hero.eyebrow":"Certified detailing studio",
     "hero.h1":"Your car<span class='l2 gold-text'>in 4K resolution.</span>",
     "hero.lead":"Ceramic coatings, paint correction, PPF film and full interior detailing. Premium-grade equipment and products, with a written guarantee.",
