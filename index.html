@@ -142,6 +142,30 @@
   .scroll-ind .mouse{width:22px;height:34px;border:1px solid var(--line);border-radius:12px;position:relative}
   .scroll-ind .mouse::after{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:3px;height:7px;border-radius:2px;background:var(--gold);animation:scrolldot 1.6s infinite}
   @keyframes scrolldot{0%{opacity:0;top:6px}40%{opacity:1}80%{opacity:0;top:16px}100%{opacity:0}}
+  /* hero photo */
+  .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,7,8,.9),rgba(7,7,8,.55) 55%,rgba(7,7,8,.3)),linear-gradient(0deg,rgba(7,7,8,.95),rgba(7,7,8,0) 45%)}
+
+  /* ---------- PHOTO MOSAIC (services) ---------- */
+  .pmosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .ptile{position:relative;overflow:hidden;border-radius:var(--r);aspect-ratio:4/3;display:flex;align-items:flex-end;border:1px solid var(--line-soft);text-decoration:none}
+  .ptile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .ptile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,7,8,.86),rgba(7,7,8,.05) 60%);transition:.4s}
+  .ptile:hover img{transform:scale(1.06)}
+  .ptile:hover::after{background:linear-gradient(0deg,rgba(7,7,8,.8),rgba(212,175,55,.12) 66%)}
+  .ptile:hover{border-color:var(--gold)}
+  .ptile .plabel{position:relative;z-index:2;padding:22px 24px;display:flex;align-items:center;gap:11px}
+  .ptile .plabel::before{content:"";width:20px;height:1px;background:var(--gold);flex-shrink:0;transition:.4s}
+  .ptile:hover .plabel::before{width:34px}
+  .ptile .plabel b{font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.5px;color:#fff;line-height:1.15}
+
+  /* ---------- SHOWBAND (full-bleed) ---------- */
+  .showband{position:relative;min-height:80vh;display:flex;align-items:center;overflow:hidden;background:#000}
+  .showband .sb-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .showband::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,7,8,.86),rgba(7,7,8,.35) 60%,rgba(7,7,8,.1))}
+  .showband .wrap{position:relative;z-index:2}
+  .showband .eyebrow{margin-bottom:16px}
+  .showband h2{font-size:clamp(30px,4.5vw,54px);text-transform:uppercase;max-width:640px;color:#fff;font-weight:700}
 
   /* ---------- STATS ---------- */
   .stats{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--bg-2)}
@@ -326,6 +350,8 @@
     .why-grid,.contact-grid{grid-template-columns:1fr}
     .why-visual{aspect-ratio:3/4;min-height:420px}
     .services-grid,.price-grid,.rev-grid{grid-template-columns:1fr 1fr}
+    .pmosaic{grid-template-columns:1fr 1fr}
+    .showband{min-height:62vh}
     .proc-grid{grid-template-columns:1fr 1fr;gap:32px 12px}
     .proc-grid::before{display:none}
     .proc{padding:0 6px}
@@ -339,6 +365,7 @@
     .mobile-lang{display:flex!important}
     .stats .wrap{grid-template-columns:1fr 1fr;gap:34px 20px}
     .services-grid,.price-grid,.rev-grid,.ba-grid,.gallery{grid-template-columns:1fr}
+    .pmosaic{grid-template-columns:1fr}
     .gallery{grid-template-columns:1fr 1fr}
     .row2{grid-template-columns:1fr}
     .section{padding:80px 0}
@@ -389,9 +416,10 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="glow g4"></div><div class="grid"></div>
+    <img src="assets/hero-workshop.jpg" class="hero-photo" alt="Taller 4K">
+    <div class="hero-shade"></div>
+    <div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
   </div>
-  <img src="assets/logo-4k.png" class="hero-emblem" alt="4K">
 
   <div class="wrap hero-inner">
     <span class="eyebrow reveal" data-i18n="hero.eyebrow">Certyfikowane studio detailingu</span>
@@ -428,32 +456,23 @@
       <h2 data-i18n="services.title">Usługi detailingowe</h2>
       <p data-i18n="services.sub">Kompleksowa pielęgnacja lakieru i wnętrza — od mycia po zaawansowaną ochronę powierzchni.</p>
     </div>
-    <div class="services-grid">
-      <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M6 11h3l1.5-3 2 6 1.5-3H18"/><path d="M9 21h6M12 18v3"/></svg></div>
-        <h3 data-i18n="svc.1.t">Diagnostyka komputerowa</h3>
-        <p data-i18n="svc.1.d">Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.</p>      </div>
-      <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
-        <h3 data-i18n="svc.2.t">Mechanika i naprawy</h3>
-        <p data-i18n="svc.2.d">Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.</p>      </div>
-      <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9z"/><path d="M8 12l2.5 2.5L16 9"/></svg></div>
-        <h3 data-i18n="svc.3.t">Przeglądy i obsługa</h3>
-        <p data-i18n="svc.3.d">Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.</p>      </div>
-      <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 6.6 6 11a6 6 0 01-12 0c0-4.4 6-11 6-11z"/></svg></div>
-        <h3 data-i18n="svc.4.t">Wymiana oleju i filtrów</h3>
-        <p data-i18n="svc.4.d">Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.</p>      </div>
-      <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></svg></div>
-        <h3 data-i18n="svc.5.t">Serwis opon</h3>
-        <p data-i18n="svc.5.d">Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.</p>      </div>
-      <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M4 6l16 12M20 6L4 18M3 12h18"/></svg></div>
-        <h3 data-i18n="svc.6.t">Klimatyzacja i elektryka</h3>
-        <p data-i18n="svc.6.d">Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.</p>      </div>
+    <div class="pmosaic">
+      <a href="#contact" class="ptile reveal"><img loading="lazy" src="assets/svc-diag.jpg" alt="Diagnóstico por ordenador"><span class="plabel"><b data-i18n="svc.1.t">Diagnóstico por ordenador</b></span></a>
+      <a href="#contact" class="ptile reveal"><img loading="lazy" src="assets/svc-mech.jpg" alt="Mecánica y reparaciones"><span class="plabel"><b data-i18n="svc.2.t">Mecánica y reparaciones</b></span></a>
+      <a href="#contact" class="ptile reveal"><img loading="lazy" src="assets/svc-service.jpg" alt="Revisiones y mantenimiento"><span class="plabel"><b data-i18n="svc.3.t">Revisiones y mantenimiento</b></span></a>
+      <a href="#contact" class="ptile reveal"><img loading="lazy" src="assets/svc-oil.jpg" alt="Cambio de aceite y filtros"><span class="plabel"><b data-i18n="svc.4.t">Cambio de aceite y filtros</b></span></a>
+      <a href="#contact" class="ptile reveal"><img loading="lazy" src="assets/svc-tyres.jpg" alt="Servicio de neumáticos"><span class="plabel"><b data-i18n="svc.5.t">Servicio de neumáticos</b></span></a>
+      <a href="#contact" class="ptile reveal"><img loading="lazy" src="assets/svc-elec.jpg" alt="Aire acondicionado y electricidad"><span class="plabel"><b data-i18n="svc.6.t">Aire acondicionado y electricidad</b></span></a>
     </div>
+  </div>
+</section>
+
+<!-- ============ SHOWBAND ============ -->
+<section class="showband reveal">
+  <img src="assets/band-workshop.jpg" class="sb-photo" alt="">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="band.eyebrow">Confianza</span>
+    <h2 data-i18n-html="band.h">Presupuesto honesto.<br>Garantía por escrito.</h2>
   </div>
 </section>
 
@@ -749,6 +768,7 @@ const I18N={
     "stats.s1":"Años en el sector","stats.s2":"Coches atendidos","stats.s3":"Reparaciones con garantía","stats.s4":"Valoración media",
     "services.eyebrow":"Qué hacemos","services.title":"Servicio y reparación","services.sub":"Cuidado integral del coche en un solo lugar — desde diagnóstico y mecánica hasta revisiones y neumáticos.",
     "svc.more":"Saber más →",
+    "band.eyebrow":"Confianza","band.h":"Presupuesto honesto.<br>Garantía por escrito.",
     "svc.1.t":"Diagnóstico por ordenador","svc.1.d":"Lectura precisa de averías y revisión completa del estado del coche. Sabes exactamente qué reparar y por qué.",
     "svc.2.t":"Mecánica y reparaciones","svc.2.d":"Motor, suspensión, frenos, distribución. Reparaciones bien hechas, con piezas con garantía.",
     "svc.3.t":"Revisiones y mantenimiento","svc.3.d":"Revisiones periódicas y de temporada y mantenimiento integral. Tu coche listo para cada kilómetro.",
@@ -805,6 +825,7 @@ const I18N={
     "stats.s1":"Years in business","stats.s2":"Cars serviced","stats.s3":"Repairs warrantied","stats.s4":"Average rating",
     "services.eyebrow":"What we do","services.title":"Service & repair","services.sub":"Complete car care in one place — from diagnostics and mechanics to servicing and tyre work.",
     "svc.more":"Learn more →",
+    "band.eyebrow":"Trust","band.h":"An honest quote.<br>A written warranty.",
     "svc.1.t":"Computer diagnostics","svc.1.d":"Precise fault-code reading and a full vehicle health check. You know exactly what needs fixing and why.",
     "svc.2.t":"Mechanics & repairs","svc.2.d":"Engine, suspension, brakes, timing. Repairs done properly, on parts that carry a warranty.",
     "svc.3.t":"Servicing & maintenance","svc.3.d":"Periodic and seasonal servicing plus full maintenance. Your car ready for every mile.",
