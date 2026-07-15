@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4K — Premium Auto Detailing</title>
-<meta name="description" content="4K — studio detailingu premium. Powłoki ceramiczne, korekta lakieru, folia PPF, detailing wnętrza. Gwarancja na piśmie.">
+<title>4K — Zaufany Serwis Samochodowy (СТО)</title>
+<meta name="description" content="4K — zaufany serwis samochodowy. Diagnostyka komputerowa, mechanika i naprawy, przeglądy, wymiana oleju, serwis opon i klimatyzacji. Uczciwa wycena i gwarancja na naprawy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/jpeg" href="assets/logo-4k.jpg">
+<link rel="icon" type="image/png" href="assets/logo-4k.png">
 <style>
   :root{
     color-scheme: dark;
@@ -47,9 +47,7 @@
     --shadow:0 30px 70px -34px rgba(120,95,30,.35);
   }
   /* light-theme component overrides */
-  :root[data-theme="light"] .logo-img,
-  :root[data-theme="light"] footer .logo img{mix-blend-mode:normal;box-shadow:0 4px 16px -6px rgba(120,95,30,.5)}
-  :root[data-theme="light"] .hero-emblem{mix-blend-mode:normal;border-radius:50%;filter:drop-shadow(0 20px 50px rgba(120,95,30,.35))}
+  :root[data-theme="light"] .hero-emblem{filter:drop-shadow(0 20px 55px rgba(120,95,30,.28))}
   :root[data-theme="light"] header.nav.scrolled{background:rgba(247,244,238,.86);border-bottom-color:var(--line-soft)}
   :root[data-theme="light"] nav.links.open{background:rgba(247,244,238,.98)}
   :root[data-theme="light"] .hero-bg .g1{background:radial-gradient(circle,rgba(169,129,42,.22),transparent 70%)}
@@ -88,8 +86,8 @@
   header.nav.scrolled{background:rgba(8,8,9,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line-soft);padding:12px 0}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
   .logo{display:flex;align-items:center;gap:13px;flex-shrink:0}
-  .logo-img{height:52px;width:52px;object-fit:cover;border-radius:50%;display:block;mix-blend-mode:screen;transition:height .4s,width .4s}
-  header.nav.scrolled .logo-img{height:44px;width:44px}
+  .logo-img{height:54px;width:54px;object-fit:contain;display:block;transition:height .4s,width .4s}
+  header.nav.scrolled .logo-img{height:46px;width:46px}
   .logo .tag{display:flex;flex-direction:column;font-family:'Oswald',sans-serif;letter-spacing:2.5px;text-transform:uppercase;line-height:1.15;border-left:1px solid var(--line);padding-left:13px}
   .logo .tag b{font-size:19px;font-weight:700;letter-spacing:2px;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
   .logo .tag span{font-size:9.5px;color:var(--muted);letter-spacing:3px}
@@ -114,7 +112,7 @@
   .hero-bg .g1{width:620px;height:620px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(212,175,55,.32),transparent 70%)}
   .hero-bg .g2{width:520px;height:520px;bottom:-200px;left:-140px;background:radial-gradient(circle,rgba(212,175,55,.14),transparent 70%)}
   .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%)}
-  .hero-emblem{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:min(50vw,600px);z-index:1;mix-blend-mode:screen;pointer-events:none;user-select:none;filter:drop-shadow(0 0 60px rgba(212,175,55,.28));animation:emblemFloat 7s ease-in-out infinite}
+  .hero-emblem{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:min(50vw,600px);z-index:1;pointer-events:none;user-select:none;filter:drop-shadow(0 0 70px rgba(212,175,55,.35));animation:emblemFloat 7s ease-in-out infinite}
   @keyframes emblemFloat{0%,100%{transform:translateY(-50%)}50%{transform:translateY(calc(-50% - 14px))}}
   .hero-inner{position:relative;z-index:2;max-width:800px}
   .hero h1{font-size:clamp(44px,7.5vw,92px);text-transform:uppercase;margin:22px 0 22px;font-weight:700}
@@ -324,8 +322,8 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="logo" aria-label="4K">
-      <img src="assets/logo-4k.jpg" alt="4K" class="logo-img">
-      <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Detailing</span></span>
+      <img src="assets/logo-4k.png" alt="4K" class="logo-img">
+      <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Serwis</span></span>
     </a>
     <nav class="links" id="navlinks">
       <a href="#services" data-i18n="nav.services">Usługi</a>
@@ -362,7 +360,7 @@
   <div class="hero-bg">
     <div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
   </div>
-  <img src="assets/logo-4k.jpg" class="hero-emblem" alt="4K">
+  <img src="assets/logo-4k.png" class="hero-emblem" alt="4K">
 
   <div class="wrap hero-inner">
     <span class="eyebrow reveal" data-i18n="hero.eyebrow">Certyfikowane studio detailingu</span>
@@ -396,7 +394,7 @@
   <div class="wrap">
     <span class="brands-label" data-i18n="brands.label">Pracujemy na sprzęcie i chemii klasy premium</span>
     <div class="brand-row">
-      <span>GYEON</span><span>Koch-Chemie</span><span>RUPES</span><span>XPEL</span><span>CarPro</span><span>3M</span>
+      <span>BOSCH</span><span>Castrol</span><span>MANN-FILTER</span><span>Continental</span><span>Valeo</span><span>ZF</span>
     </div>
   </div>
 </section>
@@ -411,38 +409,38 @@
     </div>
     <div class="services-grid">
       <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 20l-4.9 2.1.9-5.5-4-3.9L9.5 7z"/></svg></div>
-        <h3 data-i18n="svc.1.t">Powłoki ceramiczne</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M6 11h3l1.5-3 2 6 1.5-3H18"/><path d="M9 21h6M12 18v3"/></svg></div>
+        <h3 data-i18n="svc.1.t">Diagnostyka komputerowa</h3>
         <p data-i18n="svc.1.d">Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.</p>
         <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
       </div>
       <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l6-6M14 4l6 6-9 9-6-6z"/><path d="M14 4l3-2 3 3-2 3"/></svg></div>
-        <h3 data-i18n="svc.2.t">Korekta lakieru</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3 data-i18n="svc.2.t">Mechanika i naprawy</h3>
         <p data-i18n="svc.2.d">Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.</p>
         <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
       </div>
       <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3 data-i18n="svc.3.t">Folia ochronna PPF</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9z"/><path d="M8 12l2.5 2.5L16 9"/></svg></div>
+        <h3 data-i18n="svc.3.t">Przeglądy i obsługa</h3>
         <p data-i18n="svc.3.d">Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.</p>
         <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
       </div>
       <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0110 0v2M12 13v3"/></svg></div>
-        <h3 data-i18n="svc.4.t">Detailing wnętrza</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 6.6 6 11a6 6 0 01-12 0c0-4.4 6-11 6-11z"/></svg></div>
+        <h3 data-i18n="svc.4.t">Wymiana oleju i filtrów</h3>
         <p data-i18n="svc.4.d">Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.</p>
         <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
       </div>
       <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 12h16M9 20v-6h6v6"/></svg></div>
-        <h3 data-i18n="svc.5.t">Renowacja skóry</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></svg></div>
+        <h3 data-i18n="svc.5.t">Serwis opon</h3>
         <p data-i18n="svc.5.d">Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.</p>
         <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
       </div>
       <div class="svc reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16a4 4 0 01-1-8 5 5 0 019.6-1.5A4 4 0 0117 16z"/><path d="M8 20l1-2M12 20l1-2M16 20l1-2"/></svg></div>
-        <h3 data-i18n="svc.6.t">Mycie detailingowe</h3>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M4 6l16 12M20 6L4 18M3 12h18"/></svg></div>
+        <h3 data-i18n="svc.6.t">Klimatyzacja i elektryka</h3>
         <p data-i18n="svc.6.d">Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.</p>
         <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
       </div>
@@ -532,7 +530,7 @@
       <div class="plan reveal">
         <h3 data-i18n="plan.1.t">Start</h3>
         <p class="desc" data-i18n="plan.1.d">Detailingowe mycie i odświeżenie na już.</p>
-        <div class="price gold-text">299 zł</div>
+        <div class="price gold-text">99 zł</div>
         <span style="color:var(--muted);font-size:13px" data-i18n="plan.from">cena od</span>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.1.f1">Mycie metodą dwóch wiader</span></li>
@@ -546,7 +544,7 @@
         <span class="flag" data-i18n="plan.popular">Najczęściej wybierany</span>
         <h3 data-i18n="plan.2.t">Premium</h3>
         <p class="desc" data-i18n="plan.2.d">Korekta lakieru i powłoka ceramiczna.</p>
-        <div class="price gold-text">1 899 zł</div>
+        <div class="price gold-text">299 zł</div>
         <span style="color:var(--muted);font-size:13px" data-i18n="plan.from">cena od</span>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.2.f1">Wszystko z pakietu Start</span></li>
@@ -628,7 +626,7 @@
       <p class="reveal" data-i18n="contact.sub">Zostaw kontakt i wybierz usługę — oddzwonimy w ciągu 15 minut i zaproponujemy termin oraz bezpłatną wycenę.</p>
       <div class="info-list">
         <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div><div><div class="k" data-i18n="contact.phone">Telefon</div><div class="v">+48 500 400 300</div></div></div>
-        <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><div class="k">E-mail</div><div class="v">kontakt@4k-detailing.pl</div></div></div>
+        <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><div class="k">E-mail</div><div class="v">kontakt@4k-serwis.pl</div></div></div>
         <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="k" data-i18n="contact.addr">Adres</div><div class="v" data-i18n="contact.addrv">ul. Motoryzacyjna 4, Warszawa</div></div></div>
         <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><div class="k" data-i18n="contact.hours">Godziny</div><div class="v" data-i18n="contact.hoursv">Pon–Sob: 8:00 – 20:00</div></div></div>
       </div>
@@ -666,7 +664,7 @@
   </div>
   <div class="wrap">
     <div class="map-band reveal">
-      <iframe title="4K Auto Detailing — mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      <iframe title="4K Auto Serwis — mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=Warszawa%20detailing&output=embed"></iframe>
     </div>
   </div>
@@ -678,8 +676,8 @@
     <div class="foot-top">
       <div class="foot-brand">
         <div class="logo">
-          <img src="assets/logo-4k.jpg" alt="4K" style="height:64px;width:64px;border-radius:50%;mix-blend-mode:screen">
-          <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Detailing</span></span>
+          <img src="assets/logo-4k.png" alt="4K" style="height:70px;width:70px;object-fit:contain">
+          <span class="tag"><b>4K</b><span data-i18n="brand.tag">Auto Serwis</span></span>
         </div>
         <p data-i18n="foot.about">Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.</p>
         <p style="color:var(--muted-2);font-size:12.5px;margin-top:14px;letter-spacing:.3px" data-i18n="foot.company">4K Detailing Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000</p>
@@ -702,13 +700,13 @@
         <div class="foot-col">
           <h5 data-i18n="foot.contact">Kontakt</h5>
           <a href="tel:+48500400300">+48 500 400 300</a>
-          <a href="mailto:kontakt@4k-detailing.pl">kontakt@4k-detailing.pl</a>
+          <a href="mailto:kontakt@4k-serwis.pl">kontakt@4k-serwis.pl</a>
           <a href="#contact" data-i18n="contact.addrv">ul. Motoryzacyjna 4, Warszawa</a>
         </div>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year"></span> 4K Auto Detailing. <span data-i18n="foot.rights">Wszelkie prawa zastrzeżone.</span></span>
+      <span>© <span id="year"></span> 4K Auto Serwis. <span data-i18n="foot.rights">Wszelkie prawa zastrzeżone.</span></span>
       <span class="zovu" data-i18n-html="foot.zovu">Realizacja: <b>ZOVU</b> Creative Agency</span>
     </div>
   </div>
@@ -718,169 +716,169 @@
 /* ============ i18n ============ */
 const I18N={
   pl:{
-    "brand.tag":"Auto Detailing",
+    "brand.tag":"Auto Serwis",
     "nav.services":"Usługi","nav.why":"Dlaczego 4K","nav.work":"Realizacje","nav.pricing":"Cennik","nav.reviews":"Opinie","nav.faq":"FAQ","nav.contact":"Kontakt","nav.cta":"Umów wizytę",
-    "brands.label":"Pracujemy na sprzęcie i chemii klasy premium",
-    "case.1":"Powłoka ceramiczna","case.2":"Korekta lakieru","case.3":"Folia PPF","case.4":"Detailing wnętrza",
+    "brands.label":"Pracujemy na oryginalnych częściach i sprawdzonych markach",
+    "case.1":"Serwis silnika","case.2":"Zawieszenie i hamulce","case.3":"Diagnostyka komputerowa","case.4":"Serwis klimatyzacji",
     "faq.eyebrow":"FAQ","faq.title":"Najczęstsze pytania","faq.sub":"Wszystko, co warto wiedzieć przed wizytą. Nie znalazłeś odpowiedzi? Zadzwoń.",
-    "faq.1.q":"Ile trwa nałożenie powłoki ceramicznej?","faq.1.a":"Zwykle od 1 do 3 dni — w zależności od stanu lakieru i zakresu korekty. Dokładny czas potwierdzamy po diagnozie.",
-    "faq.2.q":"Czy dostanę gwarancję na piśmie?","faq.2.a":"Tak. Każda powłoka i folia objęta jest pisemną gwarancją oraz kartą produktu z datą aplikacji i zakresem ochrony.",
-    "faq.3.q":"Jak długo utrzymuje się powłoka ceramiczna?","faq.3.a":"Od 2 do 5 lat, zależnie od wybranego pakietu i pielęgnacji. Doradzimy wariant dopasowany do sposobu użytkowania auta.",
-    "faq.4.q":"Czym różni się folia PPF od powłoki ceramicznej?","faq.4.a":"PPF to fizyczna, samoregenerująca się folia chroniąca przed odpryskami i zarysowaniami. Ceramika to powłoka dająca połysk i efekt hydrofobowy. Najlepszy efekt daje ich połączenie.",
-    "faq.5.q":"Czy odbieracie auto i dajecie zastępcze?","faq.5.a":"Tak. Podjedziemy po Twój samochód na terenie miasta, a na czas prac zaproponujemy pojazd zastępczy.",
-    "foot.company":"4K Detailing Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000",
-    "hero.eyebrow":"Certyfikowane studio detailingu",
+    "faq.1.q":"Czy dostanę wycenę przed naprawą?","faq.1.a":"Tak. Zawsze przedstawiamy zakres i koszt do akceptacji. Nie ruszamy z pracą bez Twojej zgody — zero niespodzianek na fakturze.",
+    "faq.2.q":"Czy dajecie gwarancję na naprawy?","faq.2.a":"Tak. Na każdą usługę i zamontowaną część wydajemy pisemną gwarancję wraz z historią wykonanych prac.",
+    "faq.3.q":"Na jakich częściach pracujecie?","faq.3.a":"Montujemy części oryginalne (OEM) lub sprawdzone zamienniki renomowanych marek — dobieramy wariant do Twoich oczekiwań i budżetu.",
+    "faq.4.q":"Ile trwa naprawa?","faq.4.a":"Prostą obsługę i diagnostykę wykonujemy najczęściej od ręki. Większe naprawy wyceniamy i podajemy termin po dokładnej diagnozie.",
+    "faq.5.q":"Czy dostanę auto zastępcze?","faq.5.a":"Tak. Na czas większych napraw proponujemy pojazd zastępczy, a w razie potrzeby odbierzemy Twoje auto z miasta.",
+    "foot.company":"4K Serwis Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000",
+    "hero.eyebrow":"Zaufany serwis samochodowy · СТО",
     "hero.h1":"Twoje auto<span class='l2 gold-text'>w rozdzielczości 4K.</span>",
-    "hero.lead":"Powłoki ceramiczne, korekta lakieru, folia PPF i pełny detailing wnętrza. Sprzęt oraz produkty klasy premium i gwarancja na piśmie.",
+    "hero.lead":"Precyzyjna diagnostyka komputerowa, mechanika, przeglądy i serwis. Uczciwa wycena przed pracą i gwarancja na każdą naprawę.",
     "hero.cta1":"Umów wizytę","hero.cta2":"Zobacz cennik",
-    "hero.t1":"Gwarancja do 5 lat","hero.t2":"Certyfikowani detailerzy","hero.t3":"2000+ aut rocznie","hero.scroll":"Przewiń",
-    "stats.s1":"Lat na rynku","stats.s2":"Zadbanych aut","stats.s3":"Gwarancji na piśmie","stats.s4":"Średnia ocena",
-    "services.eyebrow":"Co robimy","services.title":"Usługi detailingowe","services.sub":"Kompleksowa pielęgnacja lakieru i wnętrza — od mycia po zaawansowaną ochronę powierzchni.",
+    "hero.t1":"Gwarancja na naprawy","hero.t2":"Uczciwa wycena","hero.t3":"Oryginalne części","hero.scroll":"Przewiń",
+    "stats.s1":"Lat na rynku","stats.s2":"Obsłużonych aut","stats.s3":"Gwarancji na naprawy","stats.s4":"Średnia ocena",
+    "services.eyebrow":"Co robimy","services.title":"Usługi serwisowe","services.sub":"Kompleksowa obsługa samochodu w jednym miejscu — od diagnostyki i mechaniki po przeglądy i serwis opon.",
     "svc.more":"Dowiedz się więcej →",
-    "svc.1.t":"Powłoki ceramiczne","svc.1.d":"Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.",
-    "svc.2.t":"Korekta lakieru","svc.2.d":"Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.",
-    "svc.3.t":"Folia ochronna PPF","svc.3.d":"Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.",
-    "svc.4.t":"Detailing wnętrza","svc.4.d":"Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.",
-    "svc.5.t":"Renowacja skóry","svc.5.d":"Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.",
-    "svc.6.t":"Mycie detailingowe","svc.6.d":"Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.",
-    "why.eyebrow":"Dlaczego my","why.title":"Zaufanie w każdym detalu","why.sub":"Traktujemy każde auto jak własne. Jasne warunki, sprawdzone produkty i gwarancja na piśmie — bez niespodzianek.",
-    "why.1.t":"Certyfikowani detailerzy","why.1.d":"Zespół z autoryzacją producentów powłok i realnym doświadczeniem na tysiącach aut.",
-    "why.2.t":"Produkty klasy premium","why.2.d":"Pracujemy wyłącznie na renomowanej chemii i sprzęcie — Gyeon, Koch-Chemie, Rupes.",
-    "why.3.t":"Gwarancja na piśmie","why.3.d":"Każda usługa objęta pisemną gwarancją i kartą powłoki. Wiesz dokładnie, za co płacisz.",
-    "why.4.t":"Odbiór i auto zastępcze","why.4.d":"Podjedziemy po Twój samochód, a na czas prac zaproponujemy auto zastępcze.",
-    "why.badge":"Satysfakcji albo poprawiamy",
+    "svc.1.t":"Diagnostyka komputerowa","svc.1.d":"Precyzyjny odczyt błędów i pełne badanie stanu auta. Wiesz dokładnie, co i dlaczego wymaga naprawy.",
+    "svc.2.t":"Mechanika i naprawy","svc.2.d":"Silnik, zawieszenie, hamulce, rozrząd. Naprawy wykonane rzetelnie, na częściach z gwarancją.",
+    "svc.3.t":"Przeglądy i obsługa","svc.3.d":"Przeglądy okresowe i sezonowe oraz kompleksowe ТО. Auto gotowe na każdy kilometr.",
+    "svc.4.t":"Wymiana oleju i filtrów","svc.4.d":"Oleje, filtry i płyny renomowanych marek. Szybka i bezpieczna wymiana od ręki.",
+    "svc.5.t":"Serwis opon","svc.5.d":"Wymiana, wyważanie, naprawa i sezonowe przechowywanie opon i felg.",
+    "svc.6.t":"Klimatyzacja i elektryka","svc.6.d":"Serwis i odgrzybianie klimatyzacji oraz diagnostyka elektroniki i instalacji elektrycznej.",
+    "why.eyebrow":"Dlaczego my","why.title":"Zaufanie w każdym detalu","why.sub":"Traktujemy każde auto jak własne. Jasna wycena, sprawdzone części i gwarancja na naprawy — bez niespodzianek i naciągania.",
+    "why.1.t":"Uczciwa diagnoza","why.1.d":"Pokazujemy usterki i tłumaczymy, co i dlaczego wymaga naprawy. Naprawiamy to, co naprawdę trzeba.",
+    "why.2.t":"Wycena przed pracą","why.2.d":"Zakres i koszt akceptujesz przed rozpoczęciem. Na fakturze nie ma ukrytych pozycji.",
+    "why.3.t":"Gwarancja na naprawy","why.3.d":"Na każdą usługę i zamontowaną część dajemy pisemną gwarancję oraz historię prac.",
+    "why.4.t":"Odbiór i auto zastępcze","why.4.d":"Podjedziemy po Twój samochód, a na czas większej naprawy zaproponujemy pojazd zastępczy.",
+    "why.badge":"Gwarancji na wykonane naprawy",
     "proc.eyebrow":"Jak pracujemy","proc.title":"Proces w 5 krokach","proc.sub":"Przejrzysty przebieg prac — wiesz, co dzieje się z Twoim autem na każdym etapie.",
-    "proc.1.t":"Diagnoza lakieru","proc.1.d":"Pomiar grubości powłoki i ocena stanu pod oświetleniem detailingowym.",
-    "proc.2.t":"Bezpieczne mycie","proc.2.d":"Dekontaminacja chemiczna i mechaniczna, mycie bezdotykowe i ręczne.",
-    "proc.3.t":"Korekta i przygotowanie","proc.3.d":"Polerka usuwa wady, powierzchnia zostaje odtłuszczona pod powłokę.",
-    "proc.4.t":"Aplikacja ochrony","proc.4.d":"Nakładamy powłokę ceramiczną lub folię PPF w kontrolowanych warunkach.",
-    "proc.5.t":"Kontrola i odbiór","proc.5.d":"Kontrola jakości, karta gwarancyjna i przekazanie auta w pełnym blasku.",
-    "work.eyebrow":"Efekty","work.title":"Zobacz różnicę","work.sub":"Przeciągnij suwak i zobacz metamorfozę. Przed i po pracach naszego studia.","work.before":"Przed","work.after":"Po",
-    "price.eyebrow":"Cennik","price.title":"Wybierz pakiet","price.sub":"Przejrzyste pakiety dopasowane do stanu i potrzeb Twojego auta. Cena finalna po bezpłatnej wycenie.",
+    "proc.1.t":"Diagnoza i przyjęcie","proc.1.d":"Komputerowa diagnostyka i oględziny. Ustalamy realny stan i potrzeby auta.",
+    "proc.2.t":"Wycena i akceptacja","proc.2.d":"Przedstawiamy zakres, części i koszt. Ruszamy dopiero po Twojej zgodzie.",
+    "proc.3.t":"Naprawa","proc.3.d":"Wykonujemy serwis na sprawdzonych częściach, zgodnie z ustaleniami i sztuką.",
+    "proc.4.t":"Kontrola jakości","proc.4.d":"Testujemy efekt i sprawdzamy bezpieczeństwo auta przed wydaniem.",
+    "proc.5.t":"Odbiór z gwarancją","proc.5.d":"Wydajemy auto z kartą gwarancyjną i pełną historią wykonanych prac.",
+    "work.eyebrow":"Realizacje","work.title":"Nasze realizacje","work.sub":"Zobacz, jak wygląda auto przed i po serwisie w naszym warsztacie.","work.before":"Przed","work.after":"Po",
+    "price.eyebrow":"Cennik","price.title":"Cennik usług","price.sub":"Przejrzyste ceny najczęstszych usług. Koszt naprawy zawsze potwierdzamy wyceną przed rozpoczęciem prac.",
     "plan.from":"cena od","plan.popular":"Najczęściej wybierany","plan.cta":"Umów wizytę",
-    "plan.1.t":"Start","plan.1.d":"Detailingowe mycie i odświeżenie na już.","plan.1.f1":"Mycie metodą dwóch wiader","plan.1.f2":"Czyszczenie felg i opon","plan.1.f3":"Odkurzanie i detailing wnętrza","plan.1.f4":"Wosk w sprayu na 4 tygodnie",
-    "plan.2.t":"Premium","plan.2.d":"Korekta lakieru i powłoka ceramiczna.","plan.2.f1":"Wszystko z pakietu Start","plan.2.f2":"Jednoetapowa korekta lakieru","plan.2.f3":"Powłoka ceramiczna 2 lata","plan.2.f4":"Gwarancja na piśmie + karta",
-    "plan.3.t":"Concierge","plan.3.d":"Pełna ochrona: PPF, ceramika, wnętrze.","plan.3.price":"Wycena indyw.","plan.3.note":"projekt na miarę","plan.3.f1":"Folia PPF na wybrane elementy","plan.3.f2":"Wieloetapowa korekta lakieru","plan.3.f3":"Powłoka ceramiczna do 5 lat","plan.3.f4":"Odbiór auta i auto zastępcze",
-    "rev.eyebrow":"Opinie","rev.title":"Co mówią klienci","rev.sub":"Średnia ocena 4,9/5 na podstawie setek zrealizowanych zleceń.",
-    "rev.1.t":"„Auto wyglądało lepiej niż z salonu. Powłoka ceramiczna robi robotę, a obsługa na poziomie premium.”","rev.1.n":"Michał K.","rev.1.c":"BMW M4 Competition",
-    "rev.2.t":"„Profesjonalnie od pierwszego kontaktu. Pokazali stan lakieru przed i po — pełna transparentność.”","rev.2.n":"Anna N.","rev.2.c":"Audi Q5",
-    "rev.3.t":"„Folia PPF na przód i święty spokój. Kamienie odbijają się bez śladu. Polecam każdemu.”","rev.3.n":"Paweł W.","rev.3.c":"Porsche 911",
-    "contact.eyebrow":"Kontakt","contact.title":"Umów wizytę","contact.sub":"Zostaw kontakt i wybierz usługę — oddzwonimy w ciągu 15 minut i zaproponujemy termin oraz bezpłatną wycenę.",
-    "contact.phone":"Telefon","contact.addr":"Adres","contact.addrv":"ul. Motoryzacyjna 4, Warszawa","contact.hours":"Godziny","contact.hoursv":"Pon–Sob: 8:00 – 20:00",
-    "form.title":"Formularz rezerwacji","form.sub":"Wypełnij — reszta po naszej stronie.","form.name":"Imię","form.tel":"Telefon","form.car":"Marka i model","form.service":"Usługa","form.msg":"Wiadomość","form.msgph":"Opisz stan auta lub oczekiwania…","form.send":"Wyślij zgłoszenie",
-    "form.opt1":"Powłoka ceramiczna","form.opt2":"Korekta lakieru","form.opt3":"Folia PPF","form.opt4":"Detailing wnętrza","form.opt5":"Mycie detailingowe","form.opt6":"Inna / konsultacja",
+    "plan.1.t":"Diagnostyka","plan.1.d":"Pełne badanie i odczyt błędów.","plan.1.f1":"Diagnostyka komputerowa","plan.1.f2":"Odczyt i kasowanie błędów","plan.1.f3":"Ocena stanu technicznego","plan.1.f4":"Raport i rekomendacje",
+    "plan.2.t":"Przegląd okresowy","plan.2.d":"Sezonowa obsługa Twojego auta.","plan.2.f1":"Wszystko z Diagnostyki","plan.2.f2":"Wymiana oleju i filtra","plan.2.f3":"Kontrola płynów i hamulców","plan.2.f4":"Gwarancja na wykonane prace",
+    "plan.3.t":"Serwis kompleksowy","plan.3.d":"Naprawa według potrzeb auta.","plan.3.price":"Wycena indyw.","plan.3.note":"po diagnozie","plan.3.f1":"Mechanika i naprawy","plan.3.f2":"Oryginalne lub sprawdzone części","plan.3.f3":"Auto zastępcze na czas naprawy","plan.3.f4":"Pisemna gwarancja na naprawy",
+    "rev.eyebrow":"Opinie","rev.title":"Co mówią klienci","rev.sub":"Średnia ocena 4,9/5 na podstawie setek obsłużonych aut.",
+    "rev.1.t":"„Zdiagnozowali usterkę, której trzy inne warsztaty nie znalazły. Konkretnie i uczciwie.”","rev.1.n":"Michał K.","rev.1.c":"BMW serii 3",
+    "rev.2.t":"„Wycena zgodna z fakturą co do złotówki. Wreszcie serwis, któremu naprawdę ufam.”","rev.2.n":"Anna N.","rev.2.c":"Audi Q5",
+    "rev.3.t":"„Naprawa z gwarancją i auto zastępcze na czas. Pełen profesjonalizm i szybki kontakt.”","rev.3.n":"Paweł W.","rev.3.c":"VW Passat",
+    "contact.eyebrow":"Kontakt","contact.title":"Umów wizytę","contact.sub":"Zostaw kontakt i opisz problem — oddzwonimy w ciągu 15 minut i umówimy termin oraz diagnozę.",
+    "contact.phone":"Telefon","contact.addr":"Adres","contact.addrv":"ul. Warsztatowa 4, Warszawa","contact.hours":"Godziny","contact.hoursv":"Pon–Sob: 8:00 – 19:00",
+    "form.title":"Formularz zgłoszenia","form.sub":"Wypełnij — resztą zajmiemy się my.","form.name":"Imię","form.tel":"Telefon","form.car":"Marka i model","form.service":"Usługa","form.msg":"Opis problemu","form.msgph":"Opisz objawy lub zakres prac…","form.send":"Wyślij zgłoszenie",
+    "form.opt1":"Diagnostyka komputerowa","form.opt2":"Mechanika i naprawa","form.opt3":"Przegląd i obsługa","form.opt4":"Wymiana oleju","form.opt5":"Serwis opon","form.opt6":"Klimatyzacja / elektryka",
     "form.ok":"Dziękujemy! Oddzwonimy w ciągu 15 minut.",
-    "foot.about":"Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.","foot.nav":"Nawigacja","foot.services":"Usługi","foot.contact":"Kontakt","foot.rights":"Wszelkie prawa zastrzeżone.","foot.zovu":"Realizacja: <b>ZOVU</b> Creative Agency"
+    "foot.about":"Zaufany serwis samochodowy. Diagnostyka, mechanika, przeglądy i serwis z uczciwą wyceną i gwarancją na naprawy.","foot.nav":"Nawigacja","foot.services":"Usługi","foot.contact":"Kontakt","foot.rights":"Wszelkie prawa zastrzeżone.","foot.zovu":"Realizacja: <b>ZOVU</b> Creative Agency"
   },
   ru:{
-    "brand.tag":"Авто Детейлинг",
+    "brand.tag":"Авто Сервис",
     "nav.services":"Услуги","nav.why":"Почему 4K","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.faq":"FAQ","nav.contact":"Контакты","nav.cta":"Записаться",
-    "brands.label":"Работаем на оборудовании и химии премиум-класса",
-    "case.1":"Керамическое покрытие","case.2":"Полировка лака","case.3":"Плёнка PPF","case.4":"Детейлинг салона",
+    "brands.label":"Работаем на оригинальных запчастях и проверенных брендах",
+    "case.1":"Ремонт двигателя","case.2":"Подвеска и тормоза","case.3":"Компьютерная диагностика","case.4":"Сервис кондиционера",
     "faq.eyebrow":"FAQ","faq.title":"Частые вопросы","faq.sub":"Всё, что стоит знать перед визитом. Не нашли ответ? Позвоните.",
-    "faq.1.q":"Сколько длится нанесение керамики?","faq.1.a":"Обычно от 1 до 3 дней — в зависимости от состояния лака и объёма полировки. Точное время подтверждаем после диагностики.",
-    "faq.2.q":"Дадите гарантию письменно?","faq.2.a":"Да. Каждое покрытие и плёнка сопровождается письменной гарантией и картой продукта с датой нанесения и объёмом защиты.",
-    "faq.3.q":"Сколько держится керамическое покрытие?","faq.3.a":"От 2 до 5 лет, в зависимости от пакета и ухода. Подберём вариант под то, как вы используете авто.",
-    "faq.4.q":"Чем плёнка PPF отличается от керамики?","faq.4.a":"PPF — физическая самовосстанавливающаяся плёнка от сколов и царапин. Керамика — покрытие, дающее блеск и гидрофобность. Лучший эффект — их сочетание.",
-    "faq.5.q":"Забираете авто и даёте подменное?","faq.5.a":"Да. Заберём ваш автомобиль по городу, а на время работ предложим подменный.",
-    "foot.company":"4K Detailing Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000",
-    "hero.eyebrow":"Сертифицированная студия детейлинга",
+    "faq.1.q":"Дадите смету до ремонта?","faq.1.a":"Да. Всегда согласуем объём и стоимость перед началом. Без вашего одобрения к работе не приступаем — никаких сюрпризов в счёте.",
+    "faq.2.q":"Есть гарантия на ремонт?","faq.2.a":"Да. На каждую услугу и установленную запчасть выдаём письменную гарантию с историей выполненных работ.",
+    "faq.3.q":"На каких запчастях работаете?","faq.3.a":"Ставим оригинальные (OEM) либо проверенные аналоги известных брендов — подбираем под ваши ожидания и бюджет.",
+    "faq.4.q":"Сколько длится ремонт?","faq.4.a":"Простое обслуживание и диагностику чаще всего делаем сразу. Крупный ремонт оцениваем и называем срок после точной диагностики.",
+    "faq.5.q":"Дадите подменное авто?","faq.5.a":"Да. На время крупного ремонта предложим подменный автомобиль, при необходимости заберём ваше авто по городу.",
+    "foot.company":"4K Serwis Sp. z o.o. · NIP 000-000-00-00 · REGON 000000000",
+    "hero.eyebrow":"Надёжный автосервис · СТО",
     "hero.h1":"Твоё авто<span class='l2 gold-text'>в разрешении 4K.</span>",
-    "hero.lead":"Керамические покрытия, полировка лака, плёнка PPF и полный детейлинг салона. Оборудование и материалы премиум-класса, гарантия в письменном виде.",
+    "hero.lead":"Точная компьютерная диагностика, механика, ТО и сервис. Честная смета до начала работ и гарантия на каждый ремонт.",
     "hero.cta1":"Записаться","hero.cta2":"Смотреть цены",
-    "hero.t1":"Гарантия до 5 лет","hero.t2":"Сертифицированные мастера","hero.t3":"2000+ авто в год","hero.scroll":"Листайте",
-    "stats.s1":"Лет на рынке","stats.s2":"Обслужено авто","stats.s3":"Гарантия письменно","stats.s4":"Средняя оценка",
-    "services.eyebrow":"Что мы делаем","services.title":"Услуги детейлинга","services.sub":"Комплексный уход за лаком и салоном — от мойки до продвинутой защиты поверхностей.",
+    "hero.t1":"Гарантия на ремонт","hero.t2":"Честная смета","hero.t3":"Оригинальные запчасти","hero.scroll":"Листайте",
+    "stats.s1":"Лет на рынке","stats.s2":"Обслужено авто","stats.s3":"Гарантия на ремонт","stats.s4":"Средняя оценка",
+    "services.eyebrow":"Что мы делаем","services.title":"Сервисные услуги","services.sub":"Полное обслуживание автомобиля в одном месте — от диагностики и механики до ТО и шиномонтажа.",
     "svc.more":"Подробнее →",
-    "svc.1.t":"Керамические покрытия","svc.1.d":"Защита лака до 5 лет. Глубокий блеск, гидрофобный эффект и стойкость к загрязнениям.",
-    "svc.2.t":"Полировка лака","svc.2.d":"Многоэтапная полировка убирает царапины, голограммы и матовость. Лак как новый.",
-    "svc.3.t":"Защитная плёнка PPF","svc.3.d":"Невидимый щит от сколов, песка и камней. Самовосстанавливающийся материал.",
-    "svc.4.t":"Детейлинг салона","svc.4.d":"Глубокая чистка, озоновая дезинфекция и освежение каждого элемента салона.",
-    "svc.5.t":"Реставрация кожи","svc.5.d":"Чистка, питание и защита кожаного салона. Возвращаем цвет и мягкость.",
-    "svc.6.t":"Детейлинг-мойка","svc.6.d":"Безопасный многоэтапный уход методом двух вёдер. Без царапин и микроповреждений.",
-    "why.eyebrow":"Почему мы","why.title":"Доверие в каждой детали","why.sub":"Относимся к каждому авто как к своему. Понятные условия, проверенные материалы и гарантия письменно — без сюрпризов.",
-    "why.1.t":"Сертифицированные мастера","why.1.d":"Команда с авторизацией производителей покрытий и реальным опытом на тысячах авто.",
-    "why.2.t":"Материалы премиум-класса","why.2.d":"Работаем только на именитой химии и оборудовании — Gyeon, Koch-Chemie, Rupes.",
-    "why.3.t":"Гарантия письменно","why.3.d":"Каждая услуга с письменной гарантией и картой покрытия. Вы точно знаете, за что платите.",
-    "why.4.t":"Забор авто и подмена","why.4.d":"Заберём ваш автомобиль, а на время работ предложим подменный.",
-    "why.badge":"Довольны или переделаем",
+    "svc.1.t":"Компьютерная диагностика","svc.1.d":"Точное считывание ошибок и полная проверка состояния авто. Вы точно знаете, что и почему требует ремонта.",
+    "svc.2.t":"Механика и ремонт","svc.2.d":"Двигатель, подвеска, тормоза, ГРМ. Ремонт выполнен добросовестно, на запчастях с гарантией.",
+    "svc.3.t":"ТО и обслуживание","svc.3.d":"Периодическое и сезонное ТО, комплексное обслуживание. Авто готово к любому километру.",
+    "svc.4.t":"Замена масла и фильтров","svc.4.d":"Масла, фильтры и жидкости известных брендов. Быстрая и безопасная замена сразу.",
+    "svc.5.t":"Шиномонтаж","svc.5.d":"Замена, балансировка, ремонт и сезонное хранение шин и дисков.",
+    "svc.6.t":"Кондиционер и электрика","svc.6.d":"Сервис и антибактериальная обработка кондиционера, диагностика электроники и проводки.",
+    "why.eyebrow":"Почему мы","why.title":"Доверие в каждой детали","why.sub":"Относимся к каждому авто как к своему. Понятная смета, проверенные запчасти и гарантия на ремонт — без сюрпризов и навязывания.",
+    "why.1.t":"Честная диагностика","why.1.d":"Показываем неисправности и объясняем, что и почему требует ремонта. Чиним то, что действительно нужно.",
+    "why.2.t":"Смета до работы","why.2.d":"Объём и стоимость вы одобряете до начала. В счёте нет скрытых позиций.",
+    "why.3.t":"Гарантия на ремонт","why.3.d":"На каждую услугу и установленную запчасть даём письменную гарантию и историю работ.",
+    "why.4.t":"Забор и подменное авто","why.4.d":"Заберём ваш автомобиль, а на время крупного ремонта предложим подменный.",
+    "why.badge":"Гарантии на выполненный ремонт",
     "proc.eyebrow":"Как мы работаем","proc.title":"Процесс в 5 шагов","proc.sub":"Прозрачный ход работ — вы знаете, что происходит с авто на каждом этапе.",
-    "proc.1.t":"Диагностика лака","proc.1.d":"Замер толщины покрытия и оценка состояния под детейлинг-светом.",
-    "proc.2.t":"Безопасная мойка","proc.2.d":"Химическая и механическая дезактивация, бесконтактная и ручная мойка.",
-    "proc.3.t":"Полировка и подготовка","proc.3.d":"Полировка убирает дефекты, поверхность обезжиривается под покрытие.",
-    "proc.4.t":"Нанесение защиты","proc.4.d":"Наносим керамику или плёнку PPF в контролируемых условиях.",
-    "proc.5.t":"Контроль и выдача","proc.5.d":"Контроль качества, гарантийная карта и выдача авто в полном блеске.",
-    "work.eyebrow":"Результат","work.title":"Почувствуй разницу","work.sub":"Потяни ползунок и увидь превращение. До и после работ нашей студии.","work.before":"До","work.after":"После",
-    "price.eyebrow":"Цены","price.title":"Выбери пакет","price.sub":"Прозрачные пакеты под состояние и задачи вашего авто. Финальная цена после бесплатной оценки.",
+    "proc.1.t":"Диагностика и приёмка","proc.1.d":"Компьютерная диагностика и осмотр. Определяем реальное состояние и потребности авто.",
+    "proc.2.t":"Смета и согласование","proc.2.d":"Показываем объём, запчасти и стоимость. Начинаем только после вашего согласия.",
+    "proc.3.t":"Ремонт","proc.3.d":"Выполняем сервис на проверенных запчастях, по согласованию и по правилам.",
+    "proc.4.t":"Контроль качества","proc.4.d":"Тестируем результат и проверяем безопасность авто перед выдачей.",
+    "proc.5.t":"Выдача с гарантией","proc.5.d":"Отдаём авто с гарантийной картой и полной историей выполненных работ.",
+    "work.eyebrow":"Работы","work.title":"Наши работы","work.sub":"Посмотрите, как выглядит авто до и после сервиса в нашей мастерской.","work.before":"До","work.after":"После",
+    "price.eyebrow":"Цены","price.title":"Цены на услуги","price.sub":"Прозрачные цены на частые услуги. Стоимость ремонта всегда подтверждаем сметой до начала работ.",
     "plan.from":"цена от","plan.popular":"Выбирают чаще всего","plan.cta":"Записаться",
-    "plan.1.t":"Старт","plan.1.d":"Детейлинг-мойка и освежение прямо сейчас.","plan.1.f1":"Мойка методом двух вёдер","plan.1.f2":"Чистка дисков и шин","plan.1.f3":"Пылесос и детейлинг салона","plan.1.f4":"Воск-спрей на 4 недели",
-    "plan.2.t":"Премиум","plan.2.d":"Полировка лака и керамическое покрытие.","plan.2.f1":"Всё из пакета Старт","plan.2.f2":"Одноэтапная полировка лака","plan.2.f3":"Керамика на 2 года","plan.2.f4":"Гарантия письменно + карта",
-    "plan.3.t":"Consierge","plan.3.d":"Полная защита: PPF, керамика, салон.","plan.3.price":"Индив. расчёт","plan.3.note":"проект под вас","plan.3.f1":"Плёнка PPF на выбранные детали","plan.3.f2":"Многоэтапная полировка лака","plan.3.f3":"Керамическое покрытие до 5 лет","plan.3.f4":"Забор авто и подменный автомобиль",
-    "rev.eyebrow":"Отзывы","rev.title":"Что говорят клиенты","rev.sub":"Средняя оценка 4,9/5 на основе сотен выполненных заказов.",
-    "rev.1.t":"«Авто выглядело лучше, чем из салона. Керамика делает своё дело, а сервис — премиум-уровня.»","rev.1.n":"Михаил К.","rev.1.c":"BMW M4 Competition",
-    "rev.2.t":"«Профессионально с первого контакта. Показали состояние лака до и после — полная прозрачность.»","rev.2.n":"Анна Н.","rev.2.c":"Audi Q5",
-    "rev.3.t":"«Плёнка PPF на перёд — и полный покой. Камни отскакивают без следа. Рекомендую всем.»","rev.3.n":"Павел В.","rev.3.c":"Porsche 911",
-    "contact.eyebrow":"Контакты","contact.title":"Записаться","contact.sub":"Оставьте контакт и выберите услугу — перезвоним в течение 15 минут, предложим время и бесплатную оценку.",
-    "contact.phone":"Телефон","contact.addr":"Адрес","contact.addrv":"ул. Моторизацийна 4, Варшава","contact.hours":"Часы","contact.hoursv":"Пн–Сб: 8:00 – 20:00",
-    "form.title":"Форма записи","form.sub":"Заполните — остальное на нас.","form.name":"Имя","form.tel":"Телефон","form.car":"Марка и модель","form.service":"Услуга","form.msg":"Сообщение","form.msgph":"Опишите состояние авто или пожелания…","form.send":"Отправить заявку",
-    "form.opt1":"Керамическое покрытие","form.opt2":"Полировка лака","form.opt3":"Плёнка PPF","form.opt4":"Детейлинг салона","form.opt5":"Детейлинг-мойка","form.opt6":"Другое / консультация",
+    "plan.1.t":"Диагностика","plan.1.d":"Полная проверка и считывание ошибок.","plan.1.f1":"Компьютерная диагностика","plan.1.f2":"Считывание и сброс ошибок","plan.1.f3":"Оценка технического состояния","plan.1.f4":"Отчёт и рекомендации",
+    "plan.2.t":"Периодическое ТО","plan.2.d":"Сезонное обслуживание вашего авто.","plan.2.f1":"Всё из Диагностики","plan.2.f2":"Замена масла и фильтра","plan.2.f3":"Проверка жидкостей и тормозов","plan.2.f4":"Гарантия на выполненные работы",
+    "plan.3.t":"Комплексный сервис","plan.3.d":"Ремонт по потребностям авто.","plan.3.price":"Индив. расчёт","plan.3.note":"после диагностики","plan.3.f1":"Механика и ремонт","plan.3.f2":"Оригинальные или проверенные запчасти","plan.3.f3":"Подменное авто на время ремонта","plan.3.f4":"Письменная гарантия на ремонт",
+    "rev.eyebrow":"Отзывы","rev.title":"Что говорят клиенты","rev.sub":"Средняя оценка 4,9/5 на основе сотен обслуженных авто.",
+    "rev.1.t":"«Нашли неисправность, которую три других сервиса не увидели. Конкретно и честно.»","rev.1.n":"Михаил К.","rev.1.c":"BMW 3 серии",
+    "rev.2.t":"«Смета совпала со счётом до копейки. Наконец сервис, которому реально доверяю.»","rev.2.n":"Анна Н.","rev.2.c":"Audi Q5",
+    "rev.3.t":"«Ремонт с гарантией и подменное авто вовремя. Полный профессионализм и быстрый контакт.»","rev.3.n":"Павел В.","rev.3.c":"VW Passat",
+    "contact.eyebrow":"Контакты","contact.title":"Записаться","contact.sub":"Оставьте контакт и опишите проблему — перезвоним в течение 15 минут и согласуем время и диагностику.",
+    "contact.phone":"Телефон","contact.addr":"Адрес","contact.addrv":"ул. Варштатова 4, Варшава","contact.hours":"Часы","contact.hoursv":"Пн–Сб: 8:00 – 19:00",
+    "form.title":"Форма заявки","form.sub":"Заполните — остальным займёмся мы.","form.name":"Имя","form.tel":"Телефон","form.car":"Марка и модель","form.service":"Услуга","form.msg":"Описание проблемы","form.msgph":"Опишите симптомы или объём работ…","form.send":"Отправить заявку",
+    "form.opt1":"Компьютерная диагностика","form.opt2":"Механика и ремонт","form.opt3":"ТО и обслуживание","form.opt4":"Замена масла","form.opt5":"Шиномонтаж","form.opt6":"Кондиционер / электрика",
     "form.ok":"Спасибо! Перезвоним в течение 15 минут.",
-    "foot.about":"Студия премиум-детейлинга. Покрытия, полировка лака, PPF и уход за салоном с гарантией письменно.","foot.nav":"Навигация","foot.services":"Услуги","foot.contact":"Контакты","foot.rights":"Все права защищены.","foot.zovu":"Реализация: <b>ZOVU</b> Creative Agency"
+    "foot.about":"Надёжный автосервис. Диагностика, механика, ТО и сервис с честной сметой и гарантией на ремонт.","foot.nav":"Навигация","foot.services":"Услуги","foot.contact":"Контакты","foot.rights":"Все права защищены.","foot.zovu":"Реализация: <b>ZOVU</b> Creative Agency"
   },
   en:{
-    "brand.tag":"Auto Detailing",
+    "brand.tag":"Auto Serwis",
     "nav.services":"Services","nav.why":"Why 4K","nav.work":"Gallery","nav.pricing":"Pricing","nav.reviews":"Reviews","nav.faq":"FAQ","nav.contact":"Contact","nav.cta":"Book now",
-    "brands.label":"We work with premium-grade equipment and chemistry",
-    "case.1":"Ceramic coating","case.2":"Paint correction","case.3":"PPF film","case.4":"Interior detailing",
+    "brands.label":"We work with original parts and trusted brands",
+    "case.1":"Engine service","case.2":"Suspension & brakes","case.3":"Computer diagnostics","case.4":"A/C service",
     "faq.eyebrow":"FAQ","faq.title":"Frequently asked questions","faq.sub":"Everything worth knowing before your visit. Didn't find an answer? Call us.",
-    "faq.1.q":"How long does a ceramic coating take?","faq.1.a":"Usually 1 to 3 days — depending on the paint condition and correction scope. We confirm the exact time after diagnosis.",
-    "faq.2.q":"Do I get a written guarantee?","faq.2.a":"Yes. Every coating and film comes with a written warranty and a product card stating the application date and protection scope.",
-    "faq.3.q":"How long does a ceramic coating last?","faq.3.a":"From 2 to 5 years, depending on the package and care. We'll recommend the option that fits how you use your car.",
-    "faq.4.q":"How is PPF different from ceramic coating?","faq.4.a":"PPF is a physical, self-healing film protecting against chips and scratches. Ceramic is a coating that adds gloss and a hydrophobic effect. They work best combined.",
-    "faq.5.q":"Do you pick up the car and provide a courtesy vehicle?","faq.5.a":"Yes. We'll collect your car within the city and offer a courtesy vehicle while we work.",
-    "foot.company":"4K Detailing Ltd. · VAT 000-000-00-00 · Reg. 000000000",
-    "hero.eyebrow":"Certified detailing studio",
+    "faq.1.q":"Will I get a quote before the repair?","faq.1.a":"Yes. We always agree the scope and cost for your approval. We don't start work without your go-ahead — no surprises on the invoice.",
+    "faq.2.q":"Do you guarantee your repairs?","faq.2.a":"Yes. Every service and fitted part comes with a written warranty and a full record of the work done.",
+    "faq.3.q":"What parts do you use?","faq.3.a":"We fit original (OEM) parts or trusted equivalents from reputable brands — matched to your expectations and budget.",
+    "faq.4.q":"How long does a repair take?","faq.4.a":"Simple servicing and diagnostics are usually done the same day. Larger repairs are quoted with a timeframe after a proper diagnosis.",
+    "faq.5.q":"Do you provide a courtesy car?","faq.5.a":"Yes. For larger repairs we offer a courtesy vehicle and, if needed, we'll collect your car within the city.",
+    "foot.company":"4K Serwis Ltd. · VAT 000-000-00-00 · Reg. 000000000",
+    "hero.eyebrow":"Trusted auto service · СТО",
     "hero.h1":"Your car<span class='l2 gold-text'>in 4K resolution.</span>",
-    "hero.lead":"Ceramic coatings, paint correction, PPF film and full interior detailing. Premium-grade equipment and products, with a written guarantee.",
+    "hero.lead":"Precise computer diagnostics, mechanics, servicing and maintenance. An honest quote before any work and a warranty on every repair.",
     "hero.cta1":"Book now","hero.cta2":"See pricing",
-    "hero.t1":"Up to 5-year warranty","hero.t2":"Certified detailers","hero.t3":"2000+ cars a year","hero.scroll":"Scroll",
-    "stats.s1":"Years in business","stats.s2":"Cars detailed","stats.s3":"Written warranty","stats.s4":"Average rating",
-    "services.eyebrow":"What we do","services.title":"Detailing services","services.sub":"Complete paint and interior care — from washing to advanced surface protection.",
+    "hero.t1":"Warranty on repairs","hero.t2":"Honest quote","hero.t3":"Original parts","hero.scroll":"Scroll",
+    "stats.s1":"Years in business","stats.s2":"Cars serviced","stats.s3":"Repairs warrantied","stats.s4":"Average rating",
+    "services.eyebrow":"What we do","services.title":"Service & repair","services.sub":"Complete car care in one place — from diagnostics and mechanics to servicing and tyre work.",
     "svc.more":"Learn more →",
-    "svc.1.t":"Ceramic coatings","svc.1.d":"Paint protection for up to 5 years. Deep gloss, hydrophobic effect and dirt resistance.",
-    "svc.2.t":"Paint correction","svc.2.d":"Multi-stage polishing removes scratches, holograms and dullness. Paint like new.",
-    "svc.3.t":"PPF protective film","svc.3.d":"An invisible shield against chips, sand and stones. Self-healing material.",
-    "svc.4.t":"Interior detailing","svc.4.d":"Deep cleaning, ozone disinfection and refresh of every cabin element.",
-    "svc.5.t":"Leather restoration","svc.5.d":"Cleaning, nourishing and protecting leather upholstery. We bring back colour and softness.",
-    "svc.6.t":"Detailing wash","svc.6.d":"Safe, multi-stage two-bucket care. No swirls, no micro-damage.",
-    "why.eyebrow":"Why us","why.title":"Trust in every detail","why.sub":"We treat every car as our own. Clear terms, proven products and a written guarantee — no surprises.",
-    "why.1.t":"Certified detailers","why.1.d":"A team authorised by coating manufacturers with real experience on thousands of cars.",
-    "why.2.t":"Premium-grade products","why.2.d":"We work exclusively with renowned chemistry and tools — Gyeon, Koch-Chemie, Rupes.",
-    "why.3.t":"Written guarantee","why.3.d":"Every service comes with a written warranty and coating card. You know exactly what you pay for.",
-    "why.4.t":"Pick-up & courtesy car","why.4.d":"We'll collect your car and offer a courtesy vehicle while we work.",
-    "why.badge":"Satisfaction or we redo it",
+    "svc.1.t":"Computer diagnostics","svc.1.d":"Precise fault-code reading and a full vehicle health check. You know exactly what needs fixing and why.",
+    "svc.2.t":"Mechanics & repairs","svc.2.d":"Engine, suspension, brakes, timing. Repairs done properly, on parts that carry a warranty.",
+    "svc.3.t":"Servicing & maintenance","svc.3.d":"Periodic and seasonal servicing plus full maintenance. Your car ready for every mile.",
+    "svc.4.t":"Oil & filter change","svc.4.d":"Oils, filters and fluids from reputable brands. Fast, safe replacement on the spot.",
+    "svc.5.t":"Tyre service","svc.5.d":"Fitting, balancing, repair and seasonal storage of tyres and wheels.",
+    "svc.6.t":"A/C & electrics","svc.6.d":"Air-con service and sanitising plus electronics and wiring diagnostics.",
+    "why.eyebrow":"Why us","why.title":"Trust in every detail","why.sub":"We treat every car as our own. A clear quote, proven parts and a warranty on repairs — no surprises, no upselling.",
+    "why.1.t":"Honest diagnosis","why.1.d":"We show you the faults and explain what needs fixing and why. We repair what genuinely matters.",
+    "why.2.t":"Quote before the work","why.2.d":"You approve the scope and cost before we start. No hidden items on the invoice.",
+    "why.3.t":"Warranty on repairs","why.3.d":"Every service and fitted part comes with a written warranty and a record of the work.",
+    "why.4.t":"Pick-up & courtesy car","why.4.d":"We'll collect your car and offer a courtesy vehicle during larger repairs.",
+    "why.badge":"Of repairs are warrantied",
     "proc.eyebrow":"How we work","proc.title":"The 5-step process","proc.sub":"A transparent workflow — you know what happens to your car at every stage.",
-    "proc.1.t":"Paint diagnosis","proc.1.d":"Coating thickness measurement and condition check under detailing light.",
-    "proc.2.t":"Safe wash","proc.2.d":"Chemical and mechanical decontamination, touchless and hand washing.",
-    "proc.3.t":"Correction & prep","proc.3.d":"Polishing removes defects, the surface is degreased for coating.",
-    "proc.4.t":"Protection applied","proc.4.d":"We apply ceramic coating or PPF film in controlled conditions.",
-    "proc.5.t":"Check & handover","proc.5.d":"Quality control, warranty card and handover of your car in full shine.",
-    "work.eyebrow":"Results","work.title":"See the difference","work.sub":"Drag the slider and watch the transformation. Before and after our studio's work.","work.before":"Before","work.after":"After",
-    "price.eyebrow":"Pricing","price.title":"Choose a package","price.sub":"Transparent packages matched to your car's condition and needs. Final price after a free quote.",
+    "proc.1.t":"Diagnosis & intake","proc.1.d":"Computer diagnostics and inspection. We establish the real condition and needs of your car.",
+    "proc.2.t":"Quote & approval","proc.2.d":"We present the scope, parts and cost. We only start once you approve.",
+    "proc.3.t":"Repair","proc.3.d":"We carry out the service on proven parts, as agreed and by the book.",
+    "proc.4.t":"Quality control","proc.4.d":"We test the result and check the car's safety before handover.",
+    "proc.5.t":"Handover with warranty","proc.5.d":"We return your car with a warranty card and a full record of the work.",
+    "work.eyebrow":"Our work","work.title":"Our work","work.sub":"See how a car looks before and after a service at our workshop.","work.before":"Before","work.after":"After",
+    "price.eyebrow":"Pricing","price.title":"Service pricing","price.sub":"Transparent prices for common services. Repair costs are always confirmed with a quote before we start.",
     "plan.from":"from","plan.popular":"Most popular","plan.cta":"Book now",
-    "plan.1.t":"Start","plan.1.d":"Detailing wash and a refresh right now.","plan.1.f1":"Two-bucket wash method","plan.1.f2":"Wheel and tyre cleaning","plan.1.f3":"Vacuum and interior detailing","plan.1.f4":"Spray wax for 4 weeks",
-    "plan.2.t":"Premium","plan.2.d":"Paint correction and ceramic coating.","plan.2.f1":"Everything in Start","plan.2.f2":"Single-stage paint correction","plan.2.f3":"2-year ceramic coating","plan.2.f4":"Written guarantee + card",
-    "plan.3.t":"Concierge","plan.3.d":"Full protection: PPF, ceramic, interior.","plan.3.price":"Custom quote","plan.3.note":"tailor-made project","plan.3.f1":"PPF film on selected parts","plan.3.f2":"Multi-stage paint correction","plan.3.f3":"Ceramic coating up to 5 years","plan.3.f4":"Car pick-up and courtesy car",
-    "rev.eyebrow":"Reviews","rev.title":"What clients say","rev.sub":"Average rating 4.9/5 based on hundreds of completed jobs.",
-    "rev.1.t":"“The car looked better than showroom. The ceramic coating does the job and the service is premium.”","rev.1.n":"Michael K.","rev.1.c":"BMW M4 Competition",
-    "rev.2.t":"“Professional from the first contact. They showed the paint condition before and after — full transparency.”","rev.2.n":"Anna N.","rev.2.c":"Audi Q5",
-    "rev.3.t":"“PPF on the front and total peace of mind. Stones bounce off without a trace. Highly recommend.”","rev.3.n":"Paul W.","rev.3.c":"Porsche 911",
-    "contact.eyebrow":"Contact","contact.title":"Book your visit","contact.sub":"Leave your details and pick a service — we'll call back within 15 minutes with a slot and a free quote.",
-    "contact.phone":"Phone","contact.addr":"Address","contact.addrv":"4 Motoryzacyjna St, Warsaw","contact.hours":"Hours","contact.hoursv":"Mon–Sat: 8:00 – 20:00",
-    "form.title":"Booking form","form.sub":"Fill it in — we'll take it from there.","form.name":"Name","form.tel":"Phone","form.car":"Make & model","form.service":"Service","form.msg":"Message","form.msgph":"Describe your car's condition or expectations…","form.send":"Send request",
-    "form.opt1":"Ceramic coating","form.opt2":"Paint correction","form.opt3":"PPF film","form.opt4":"Interior detailing","form.opt5":"Detailing wash","form.opt6":"Other / consultation",
+    "plan.1.t":"Diagnostics","plan.1.d":"Full check and fault-code reading.","plan.1.f1":"Computer diagnostics","plan.1.f2":"Fault-code read & reset","plan.1.f3":"Technical condition assessment","plan.1.f4":"Report and recommendations",
+    "plan.2.t":"Periodic service","plan.2.d":"Seasonal servicing for your car.","plan.2.f1":"Everything in Diagnostics","plan.2.f2":"Oil and filter change","plan.2.f3":"Fluids and brakes check","plan.2.f4":"Warranty on the work done",
+    "plan.3.t":"Full service","plan.3.d":"Repairs based on your car's needs.","plan.3.price":"Custom quote","plan.3.note":"after diagnosis","plan.3.f1":"Mechanics and repairs","plan.3.f2":"Original or trusted parts","plan.3.f3":"Courtesy car during the repair","plan.3.f4":"Written warranty on repairs",
+    "rev.eyebrow":"Reviews","rev.title":"What clients say","rev.sub":"Average rating 4.9/5 based on hundreds of cars serviced.",
+    "rev.1.t":"“They found a fault three other garages missed. Straight-talking and honest.”","rev.1.n":"Michael K.","rev.1.c":"BMW 3 Series",
+    "rev.2.t":"“The quote matched the invoice to the penny. Finally a garage I actually trust.”","rev.2.n":"Anna N.","rev.2.c":"Audi Q5",
+    "rev.3.t":"“Repair with a warranty and a courtesy car on time. Full professionalism and quick contact.”","rev.3.n":"Paul W.","rev.3.c":"VW Passat",
+    "contact.eyebrow":"Contact","contact.title":"Book your visit","contact.sub":"Leave your details and describe the problem — we'll call back within 15 minutes to arrange a slot and a diagnosis.",
+    "contact.phone":"Phone","contact.addr":"Address","contact.addrv":"4 Warsztatowa St, Warsaw","contact.hours":"Hours","contact.hoursv":"Mon–Sat: 8:00 – 19:00",
+    "form.title":"Request form","form.sub":"Fill it in — we'll take it from there.","form.name":"Name","form.tel":"Phone","form.car":"Make & model","form.service":"Service","form.msg":"Problem description","form.msgph":"Describe the symptoms or scope of work…","form.send":"Send request",
+    "form.opt1":"Computer diagnostics","form.opt2":"Mechanics & repair","form.opt3":"Servicing & maintenance","form.opt4":"Oil change","form.opt5":"Tyre service","form.opt6":"A/C / electrics",
     "form.ok":"Thank you! We'll call you back within 15 minutes.",
-    "foot.about":"Premium detailing studio. Coatings, paint correction, PPF and interior care with a written guarantee.","foot.nav":"Navigation","foot.services":"Services","foot.contact":"Contact","foot.rights":"All rights reserved.","foot.zovu":"Made by <b>ZOVU</b> Creative Agency"
+    "foot.about":"Trusted auto service. Diagnostics, mechanics, servicing and repairs with an honest quote and a warranty on repairs.","foot.nav":"Navigation","foot.services":"Services","foot.contact":"Contact","foot.rights":"All rights reserved.","foot.zovu":"Made by <b>ZOVU</b> Creative Agency"
   }
 };
 
