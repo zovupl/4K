@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4K — Premium Auto Detailing</title>
+<meta name="description" content="4K — studio detailingu premium. Powłoki ceramiczne, korekta lakieru, folia PPF, detailing wnętrza. Gwarancja na piśmie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23090909'/%3E%3Ctext x='50' y='72' font-family='Oswald,Arial' font-weight='700' font-size='58' text-anchor='middle' fill='%23D4AF37'%3E4K%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#070708;
+    --bg-2:#0d0d10;
+    --bg-3:#141419;
+    --card:#101014;
+    --line:rgba(212,175,55,.16);
+    --line-soft:rgba(255,255,255,.07);
+    --gold:#D4AF37;
+    --gold-bright:#F3D98B;
+    --gold-deep:#A9812A;
+    --text:#ECE8DE;
+    --muted:#9C978B;
+    --muted-2:#6f6b62;
+    --grad-gold:linear-gradient(135deg,#F6E3A0 0%,#E6C868 22%,#D4AF37 52%,#A9812A 100%);
+    --shadow:0 30px 80px -30px rgba(0,0,0,.9);
+    --r:18px;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+  h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.05;letter-spacing:.5px;text-wrap:balance;margin:0}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .gold-text{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:3.5px;font-size:12.5px;font-weight:500;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+  .section{padding:112px 0;position:relative}
+  .section-head{max-width:640px;margin:0 auto 60px;text-align:center}
+  .section-head h2{font-size:clamp(30px,5vw,50px);text-transform:uppercase;margin:16px 0 14px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;font-size:14px;padding:15px 30px;border-radius:100px;cursor:pointer;border:1px solid transparent;transition:transform .25s ease,box-shadow .25s ease,background .25s}
+  .btn-gold{background:var(--grad-gold);color:#1a1408;box-shadow:0 12px 34px -12px rgba(212,175,55,.6)}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 20px 44px -12px rgba(212,175,55,.75)}
+  .btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);transform:translateY(-3px)}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,border-color .4s,padding .4s;border-bottom:1px solid transparent;padding:20px 0}
+  header.nav.scrolled{background:rgba(8,8,9,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line-soft);padding:12px 0}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+  .logo svg{height:38px;width:auto;display:block}
+  .logo .tag{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.2;border-left:1px solid var(--line);padding-left:12px}
+  nav.links{display:flex;gap:30px}
+  nav.links a{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative}
+  nav.links a:hover{color:var(--gold-bright)}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .lang{display:flex;border:1px solid var(--line);border-radius:100px;overflow:hidden}
+  .lang button{background:none;border:none;color:var(--muted);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;padding:7px 11px;cursor:pointer;transition:.2s}
+  .lang button.active{background:var(--grad-gold);color:#1a1408}
+  .lang button:not(.active):hover{color:var(--gold-bright)}
+  .burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+  .burger span{width:20px;height:2px;background:var(--gold);display:block;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg .glow{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
+  .hero-bg .g1{width:620px;height:620px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(212,175,55,.32),transparent 70%)}
+  .hero-bg .g2{width:520px;height:520px;bottom:-200px;left:-140px;background:radial-gradient(circle,rgba(212,175,55,.14),transparent 70%)}
+  .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%)}
+  .hero-watermark{position:absolute;right:-2%;bottom:-8%;font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(280px,42vw,680px);line-height:.8;color:rgba(212,175,55,.04);z-index:0;letter-spacing:-8px;pointer-events:none;user-select:none}
+  .hero-inner{position:relative;z-index:2;max-width:800px}
+  .hero h1{font-size:clamp(44px,7.5vw,92px);text-transform:uppercase;margin:22px 0 22px;font-weight:700}
+  .hero h1 .l2{display:block}
+  .hero p.lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:600px;margin-bottom:36px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+  .trust-row{display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+  .trust-row .chip{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .trust-row .chip svg{width:18px;height:18px;color:var(--gold);flex-shrink:0}
+  .scroll-ind{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:var(--muted-2);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-family:'Oswald',sans-serif;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-ind .mouse{width:22px;height:34px;border:1px solid var(--line);border-radius:12px;position:relative}
+  .scroll-ind .mouse::after{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:3px;height:7px;border-radius:2px;background:var(--gold);animation:scrolldot 1.6s infinite}
+  @keyframes scrolldot{0%{opacity:0;top:6px}40%{opacity:1}80%{opacity:0;top:16px}100%{opacity:0}}
+
+  /* ---------- STATS ---------- */
+  .stats{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--bg-2)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:56px;padding-bottom:56px}
+  .stat{text-align:center}
+  .stat .num{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(40px,6vw,62px);line-height:1;font-variant-numeric:tabular-nums}
+  .stat .lbl{color:var(--muted);font-size:13.5px;letter-spacing:1px;text-transform:uppercase;margin-top:10px;font-family:'Oswald',sans-serif}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:var(--card);border:1px solid var(--line-soft);border-radius:var(--r);padding:34px 30px;transition:transform .35s,border-color .35s,background .35s;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) 0%,rgba(212,175,55,.09),transparent 60%);opacity:0;transition:opacity .35s}
+  .svc:hover{transform:translateY(-6px);border-color:var(--line);background:var(--bg-3)}
+  .svc:hover::before{opacity:1}
+  .svc .ic{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(212,175,55,.16),rgba(212,175,55,.04));border:1px solid var(--line);margin-bottom:22px}
+  .svc .ic svg{width:26px;height:26px;color:var(--gold)}
+  .svc h3{font-size:22px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+  .svc p{color:var(--muted);font-size:15.5px}
+  .svc .more{margin-top:18px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:7px;align-items:center}
+
+  /* ---------- WHY / TRUST ---------- */
+  .why{background:var(--bg-2);border-top:1px solid var(--line-soft)}
+  .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+  .why-list{display:flex;flex-direction:column;gap:8px;margin-top:34px}
+  .why-item{display:flex;gap:18px;padding:20px;border-radius:14px;transition:background .3s}
+  .why-item:hover{background:var(--card)}
+  .why-item .n{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;color:var(--gold);width:44px;height:44px;flex-shrink:0;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(212,175,55,.05)}
+  .why-item h4{font-family:'Oswald',sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:.5px;margin:2px 0 6px}
+  .why-item p{color:var(--muted);font-size:15px}
+  .why-visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:
+    radial-gradient(120% 80% at 30% 10%,rgba(212,175,55,.22),transparent 55%),
+    linear-gradient(160deg,#17171c,#0a0a0c 70%);
+    display:flex;align-items:flex-end;padding:34px}
+  .why-visual::before{content:"";position:absolute;top:-30%;left:-20%;width:80%;height:160%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.06) 50%,transparent 60%);transform:rotate(8deg)}
+  .why-visual .badge{position:relative;z-index:2;background:rgba(8,8,9,.6);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+  .why-visual .badge .big{font-family:'Oswald',sans-serif;font-weight:700;font-size:44px;line-height:1}
+  .why-visual .badge .sm{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;font-family:'Oswald',sans-serif}
+
+  /* ---------- PROCESS ---------- */
+  .proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:step;margin-top:10px}
+  .proc{padding:32px 22px;border-left:1px solid var(--line-soft);position:relative}
+  .proc:first-child{border-left:none}
+  .proc .pn{font-family:'Oswald',sans-serif;font-weight:700;font-size:15px;color:#1a1408;background:var(--grad-gold);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .proc h4{font-family:'Oswald',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+  .proc p{color:var(--muted);font-size:14.5px}
+
+  /* ---------- WORK / BEFORE-AFTER ---------- */
+  .work{background:var(--bg-2);border-top:1px solid var(--line-soft)}
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .ba{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;cursor:ew-resize;user-select:none;touch-action:none}
+  .ba .layer{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px}
+  .ba .after{background:
+    radial-gradient(130% 90% at 70% 0%,rgba(212,175,55,.28),transparent 50%),
+    linear-gradient(150deg,#20201f,#08080a 75%)}
+  .ba .before{background:linear-gradient(150deg,#2a2a2c,#141416);filter:grayscale(.5) brightness(.6);clip-path:inset(0 50% 0 0)}
+  .ba .lbl{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:100px;background:rgba(8,8,9,.7);border:1px solid var(--line-soft)}
+  .ba .before .lbl{color:var(--muted)}
+  .ba .after .lbl{color:var(--gold);margin-left:auto}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);z-index:3;pointer-events:none}
+  .ba .handle::after{content:"◄ ►";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;letter-spacing:1px;color:#1a1408;background:var(--grad-gold);padding:8px 6px;border-radius:100px;white-space:nowrap}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+  .shot{border-radius:14px;aspect-ratio:1;border:1px solid var(--line-soft);position:relative;overflow:hidden}
+  .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 45%,rgba(255,255,255,.07) 50%,transparent 55%)}
+  .shot.s1{background:radial-gradient(80% 60% at 30% 20%,rgba(212,175,55,.3),transparent 60%),linear-gradient(150deg,#1b1b1f,#0a0a0c)}
+  .shot.s2{background:radial-gradient(70% 70% at 70% 30%,rgba(212,175,55,.18),transparent 55%),linear-gradient(200deg,#18181d,#0b0b0d)}
+  .shot.s3{background:radial-gradient(90% 50% at 50% 0%,rgba(212,175,55,.24),transparent 55%),linear-gradient(120deg,#1c1c20,#090909)}
+  .shot.s4{background:radial-gradient(60% 80% at 40% 60%,rgba(212,175,55,.16),transparent 55%),linear-gradient(170deg,#191920,#0a0a0c)}
+
+  /* ---------- PRICING ---------- */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  .plan{background:var(--card);border:1px solid var(--line-soft);border-radius:var(--r);padding:38px 32px;display:flex;flex-direction:column;position:relative;transition:transform .35s,border-color .35s}
+  .plan:hover{transform:translateY(-6px);border-color:var(--line)}
+  .plan.featured{border-color:var(--gold);background:linear-gradient(180deg,rgba(212,175,55,.06),var(--card) 40%)}
+  .plan .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad-gold);color:#1a1408;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:100px;white-space:nowrap}
+  .plan h3{font-size:24px;text-transform:uppercase;margin-bottom:6px}
+  .plan .desc{color:var(--muted);font-size:14px;min-height:40px}
+  .plan .price{font-family:'Oswald',sans-serif;font-weight:700;font-size:40px;margin:20px 0 4px;line-height:1}
+  .plan .price small{font-size:15px;color:var(--muted);font-weight:400;letter-spacing:1px}
+  .plan ul{list-style:none;padding:0;margin:24px 0 30px;display:flex;flex-direction:column;gap:13px;flex:1}
+  .plan li{display:flex;gap:12px;font-size:15px;color:var(--text)}
+  .plan li svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:3px}
+  .plan .btn{width:100%;justify-content:center}
+
+  /* ---------- REVIEWS ---------- */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rev{background:var(--card);border:1px solid var(--line-soft);border-radius:var(--r);padding:32px}
+  .rev .stars{color:var(--gold);letter-spacing:3px;font-size:16px;margin-bottom:16px}
+  .rev p{font-size:16px;color:var(--text);margin-bottom:22px}
+  .rev .who{display:flex;align-items:center;gap:14px}
+  .rev .av{width:46px;height:46px;border-radius:50%;background:var(--grad-gold);color:#1a1408;font-family:'Oswald',sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .rev .who .nm{font-family:'Oswald',sans-serif;font-size:16px;letter-spacing:.5px;text-transform:uppercase}
+  .rev .who .car{color:var(--muted);font-size:13px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--bg-2);border-top:1px solid var(--line-soft)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:54px}
+  .contact-info h2{font-size:clamp(30px,4.5vw,46px);text-transform:uppercase;margin:16px 0 18px}
+  .contact-info>p{color:var(--muted);margin-bottom:32px;max-width:420px}
+  .info-list{display:flex;flex-direction:column;gap:20px}
+  .info-item{display:flex;gap:16px;align-items:flex-start}
+  .info-item .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(212,175,55,.05)}
+  .info-item .ic svg{width:20px;height:20px;color:var(--gold)}
+  .info-item .k{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+  .info-item .v{font-size:16px;color:var(--text)}
+  .socials{display:flex;gap:12px;margin-top:30px}
+  .socials a{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.25s}
+  .socials a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+  .socials svg{width:20px;height:20px}
+  form.book{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px}
+  form.book h3{font-size:24px;text-transform:uppercase;margin-bottom:6px}
+  form.book .sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line-soft);border-radius:11px;padding:13px 15px;color:var(--text);font-family:inherit;font-size:15px;transition:border-color .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .field textarea{resize:vertical;min-height:90px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  form.book .btn{width:100%;justify-content:center;margin-top:8px}
+  .form-note{text-align:center;color:var(--gold);font-size:14px;margin-top:16px;min-height:20px}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:60px 0 34px;border-top:1px solid var(--line-soft)}
+  .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px}
+  .foot-brand{max-width:320px}
+  .foot-brand p{color:var(--muted);font-size:14px;margin-top:16px}
+  .foot-cols{display:flex;gap:64px;flex-wrap:wrap}
+  .foot-col h5{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .foot-col a{display:block;color:var(--muted);font-size:14.5px;margin-bottom:10px;transition:color .2s}
+  .foot-col a:hover{color:var(--gold-bright)}
+  .foot-bottom{border-top:1px solid var(--line-soft);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted-2);font-size:13px}
+  .foot-bottom .zovu{color:var(--muted)}
+  .foot-bottom .zovu b{color:var(--gold)}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:960px){
+    .why-grid,.contact-grid{grid-template-columns:1fr}
+    .why-visual{aspect-ratio:16/10;order:-1}
+    .services-grid,.price-grid,.rev-grid{grid-template-columns:1fr 1fr}
+    .proc-grid{grid-template-columns:1fr 1fr}
+    .proc{border-left:none;border-top:1px solid var(--line-soft);padding:26px 4px}
+    .proc:first-child{border-top:none}
+  }
+  @media(max-width:760px){
+    nav.links,.nav-right .lang.desktop{display:none}
+    .burger{display:flex}
+    nav.links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(8,8,9,.97);backdrop-filter:blur(14px);padding:24px;gap:20px;border-bottom:1px solid var(--line)}
+    .mobile-lang{display:flex!important}
+    .stats .wrap{grid-template-columns:1fr 1fr;gap:34px 20px}
+    .services-grid,.price-grid,.rev-grid,.ba-grid,.gallery{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    .row2{grid-template-columns:1fr}
+    .section{padding:80px 0}
+    .foot-top{flex-direction:column}
+  }
+  .mobile-lang{display:none}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo" aria-label="4K">
+      <svg viewBox="0 0 132 46" role="img" aria-label="4K logo">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F6E3A0"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#A9812A"/>
+          </linearGradient>
+        </defs>
+        <!-- hidden ₿ bars motif -->
+        <rect x="44" y="0" width="3" height="46" fill="url(#lg)" opacity=".9"/>
+        <rect x="52" y="0" width="3" height="46" fill="url(#lg)" opacity=".9"/>
+        <text x="0" y="37" font-family="Oswald,Arial" font-weight="700" font-size="44" fill="url(#lg)" letter-spacing="1">4K</text>
+      </svg>
+      <span class="tag" data-i18n="brand.tag">Auto<br>Detailing</span>
+    </a>
+    <nav class="links" id="navlinks">
+      <a href="#services" data-i18n="nav.services">Usługi</a>
+      <a href="#why" data-i18n="nav.why">Dlaczego 4K</a>
+      <a href="#work" data-i18n="nav.work">Realizacje</a>
+      <a href="#pricing" data-i18n="nav.pricing">Cennik</a>
+      <a href="#reviews" data-i18n="nav.reviews">Opinie</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+      <div class="lang mobile-lang" style="margin-top:8px">
+        <button data-lang="pl">PL</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <div class="lang desktop">
+        <button data-lang="pl">PL</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-gold" style="padding:11px 22px" data-i18n="nav.cta">Umów wizytę</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
+  </div>
+  <div class="hero-watermark">4K</div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal" data-i18n="hero.eyebrow">Certyfikowane studio detailingu</span>
+    <h1 class="reveal" data-i18n-html="hero.h1">Twoje auto<span class="l2 gold-text">w rozdzielczości 4K.</span></h1>
+    <p class="lead reveal" data-i18n="hero.lead">Powłoki ceramiczne, korekta lakieru, folia PPF i pełny detailing wnętrza. Sprzęt oraz produkty klasy premium i gwarancja na piśmie.</p>
+    <div class="hero-cta reveal">
+      <a href="#contact" class="btn btn-gold" data-i18n="hero.cta1">Umów wizytę</a>
+      <a href="#pricing" class="btn btn-ghost" data-i18n="hero.cta2">Zobacz cennik</a>
+    </div>
+    <div class="trust-row reveal">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5z"/></svg><span data-i18n="hero.t1">Gwarancja do 5 lat</span></span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8 13l-2 8 6-4 6 4-2-8"/></svg><span data-i18n="hero.t2">Certyfikowani detailerzy</span></span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12a8 8 0 10-8 8"/><path d="M12 6v6l4 2"/></svg><span data-i18n="hero.t3">2000+ aut rocznie</span></span>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="mouse"></div><span data-i18n="hero.scroll">Przewiń</span></div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num gold-text" data-count="9">0</div><div class="lbl" data-i18n="stats.s1">Lat na rynku</div></div>
+    <div class="stat reveal"><div class="num gold-text" data-count="12000" data-suffix="+">0</div><div class="lbl" data-i18n="stats.s2">Zadbanych aut</div></div>
+    <div class="stat reveal"><div class="num gold-text" data-count="100" data-suffix="%">0</div><div class="lbl" data-i18n="stats.s3">Gwarancji na piśmie</div></div>
+    <div class="stat reveal"><div class="num gold-text" data-count="4.9" data-decimals="1">0</div><div class="lbl" data-i18n="stats.s4">Średnia ocena</div></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="services.eyebrow">Co robimy</span>
+      <h2 data-i18n="services.title">Usługi detailingowe</h2>
+      <p data-i18n="services.sub">Kompleksowa pielęgnacja lakieru i wnętrza — od mycia po zaawansowaną ochronę powierzchni.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 20l-4.9 2.1.9-5.5-4-3.9L9.5 7z"/></svg></div>
+        <h3 data-i18n="svc.1.t">Powłoki ceramiczne</h3>
+        <p data-i18n="svc.1.d">Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.</p>
+        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l6-6M14 4l6 6-9 9-6-6z"/><path d="M14 4l3-2 3 3-2 3"/></svg></div>
+        <h3 data-i18n="svc.2.t">Korekta lakieru</h3>
+        <p data-i18n="svc.2.d">Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.</p>
+        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3 data-i18n="svc.3.t">Folia ochronna PPF</h3>
+        <p data-i18n="svc.3.d">Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.</p>
+        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0110 0v2M12 13v3"/></svg></div>
+        <h3 data-i18n="svc.4.t">Detailing wnętrza</h3>
+        <p data-i18n="svc.4.d">Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.</p>
+        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 12h16M9 20v-6h6v6"/></svg></div>
+        <h3 data-i18n="svc.5.t">Renowacja skóry</h3>
+        <p data-i18n="svc.5.d">Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.</p>
+        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16a4 4 0 01-1-8 5 5 0 019.6-1.5A4 4 0 0117 16z"/><path d="M8 20l1-2M12 20l1-2M16 20l1-2"/></svg></div>
+        <h3 data-i18n="svc.6.t">Mycie detailingowe</h3>
+        <p data-i18n="svc.6.d">Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.</p>
+        <a href="#contact" class="more" data-i18n="svc.more">Dowiedz się więcej →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section why" id="why">
+  <div class="wrap why-grid">
+    <div>
+      <span class="eyebrow reveal" data-i18n="why.eyebrow">Dlaczego my</span>
+      <h2 class="reveal" style="font-size:clamp(30px,5vw,50px);text-transform:uppercase;margin:16px 0 8px" data-i18n="why.title">Zaufanie w każdym detalu</h2>
+      <p class="reveal" style="color:var(--muted);max-width:480px" data-i18n="why.sub">Traktujemy każde auto jak własne. Jasne warunki, sprawdzone produkty i gwarancja na piśmie — bez niespodzianek.</p>
+      <div class="why-list">
+        <div class="why-item reveal"><div class="n">01</div><div><h4 data-i18n="why.1.t">Certyfikowani detailerzy</h4><p data-i18n="why.1.d">Zespół z autoryzacją producentów powłok i realnym doświadczeniem na tysiącach aut.</p></div></div>
+        <div class="why-item reveal"><div class="n">02</div><div><h4 data-i18n="why.2.t">Produkty klasy premium</h4><p data-i18n="why.2.d">Pracujemy wyłącznie na renomowanej chemii i sprzęcie — Gyeon, Koch-Chemie, Rupes.</p></div></div>
+        <div class="why-item reveal"><div class="n">03</div><div><h4 data-i18n="why.3.t">Gwarancja na piśmie</h4><p data-i18n="why.3.d">Każda usługa objęta pisemną gwarancją i kartą powłoki. Wiesz dokładnie, za co płacisz.</p></div></div>
+        <div class="why-item reveal"><div class="n">04</div><div><h4 data-i18n="why.4.t">Odbiór i auto zastępcze</h4><p data-i18n="why.4.d">Podjedziemy po Twój samochód, a na czas prac zaproponujemy auto zastępcze.</p></div></div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <div class="badge">
+        <div class="big gold-text">100%</div>
+        <div class="sm" data-i18n="why.badge">Satysfakcji albo poprawiamy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="proc.eyebrow">Jak pracujemy</span>
+      <h2 data-i18n="proc.title">Proces w 5 krokach</h2>
+      <p data-i18n="proc.sub">Przejrzysty przebieg prac — wiesz, co dzieje się z Twoim autem na każdym etapie.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc reveal"><div class="pn">1</div><h4 data-i18n="proc.1.t">Diagnoza lakieru</h4><p data-i18n="proc.1.d">Pomiar grubości powłoki i ocena stanu pod oświetleniem detailingowym.</p></div>
+      <div class="proc reveal"><div class="pn">2</div><h4 data-i18n="proc.2.t">Bezpieczne mycie</h4><p data-i18n="proc.2.d">Dekontaminacja chemiczna i mechaniczna, mycie bezdotykowe i ręczne.</p></div>
+      <div class="proc reveal"><div class="pn">3</div><h4 data-i18n="proc.3.t">Korekta i przygotowanie</h4><p data-i18n="proc.3.d">Polerka usuwa wady, powierzchnia zostaje odtłuszczona pod powłokę.</p></div>
+      <div class="proc reveal"><div class="pn">4</div><h4 data-i18n="proc.4.t">Aplikacja ochrony</h4><p data-i18n="proc.4.d">Nakładamy powłokę ceramiczną lub folię PPF w kontrolowanych warunkach.</p></div>
+      <div class="proc reveal"><div class="pn">5</div><h4 data-i18n="proc.5.t">Kontrola i odbiór</h4><p data-i18n="proc.5.d">Kontrola jakości, karta gwarancyjna i przekazanie auta w pełnym blasku.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="work.eyebrow">Efekty</span>
+      <h2 data-i18n="work.title">Zobacz różnicę</h2>
+      <p data-i18n="work.sub">Przeciągnij suwak i zobacz metamorfozę. Przed i po pracach naszego studia.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba reveal" data-ba>
+        <div class="layer after"><span class="lbl" data-i18n="work.after">Po</span></div>
+        <div class="layer before" data-before><span class="lbl" data-i18n="work.before">Przed</span></div>
+        <div class="handle" data-handle></div>
+      </div>
+      <div class="ba reveal" data-ba>
+        <div class="layer after"><span class="lbl" data-i18n="work.after">Po</span></div>
+        <div class="layer before" data-before><span class="lbl" data-i18n="work.before">Przed</span></div>
+        <div class="handle" data-handle></div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="shot s1 reveal"></div><div class="shot s2 reveal"></div><div class="shot s3 reveal"></div><div class="shot s4 reveal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="price.eyebrow">Cennik</span>
+      <h2 data-i18n="price.title">Wybierz pakiet</h2>
+      <p data-i18n="price.sub">Przejrzyste pakiety dopasowane do stanu i potrzeb Twojego auta. Cena finalna po bezpłatnej wycenie.</p>
+    </div>
+    <div class="price-grid">
+      <div class="plan reveal">
+        <h3 data-i18n="plan.1.t">Start</h3>
+        <p class="desc" data-i18n="plan.1.d">Detailingowe mycie i odświeżenie na już.</p>
+        <div class="price gold-text">299 zł</div>
+        <span style="color:var(--muted);font-size:13px" data-i18n="plan.from">cena od</span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.1.f1">Mycie metodą dwóch wiader</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.1.f2">Czyszczenie felg i opon</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.1.f3">Odkurzanie i detailing wnętrza</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.1.f4">Wosk w sprayu na 4 tygodnie</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-i18n="plan.cta">Umów wizytę</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="flag" data-i18n="plan.popular">Najczęściej wybierany</span>
+        <h3 data-i18n="plan.2.t">Premium</h3>
+        <p class="desc" data-i18n="plan.2.d">Korekta lakieru i powłoka ceramiczna.</p>
+        <div class="price gold-text">1 899 zł</div>
+        <span style="color:var(--muted);font-size:13px" data-i18n="plan.from">cena od</span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.2.f1">Wszystko z pakietu Start</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.2.f2">Jednoetapowa korekta lakieru</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.2.f3">Powłoka ceramiczna 2 lata</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.2.f4">Gwarancja na piśmie + karta</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-gold" data-i18n="plan.cta">Umów wizytę</a>
+      </div>
+      <div class="plan reveal">
+        <h3 data-i18n="plan.3.t">Concierge</h3>
+        <p class="desc" data-i18n="plan.3.d">Pełna ochrona: PPF, ceramika, wnętrze.</p>
+        <div class="price gold-text" data-i18n="plan.3.price">Wycena indyw.</div>
+        <span style="color:var(--muted);font-size:13px" data-i18n="plan.3.note">projekt na miarę</span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.3.f1">Folia PPF na wybrane elementy</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.3.f2">Wieloetapowa korekta lakieru</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.3.f3">Powłoka ceramiczna do 5 lat</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg><span data-i18n="plan.3.f4">Odbiór auta i auto zastępcze</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" data-i18n="plan.cta">Umów wizytę</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section why" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="rev.eyebrow">Opinie</span>
+      <h2 data-i18n="rev.title">Co mówią klienci</h2>
+      <p data-i18n="rev.sub">Średnia ocena 4,9/5 na podstawie setek zrealizowanych zleceń.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="rev.1.t">„Auto wyglądało lepiej niż z salonu. Powłoka ceramiczna robi robotę, a obsługa na poziomie premium.”</p>
+        <div class="who"><div class="av">MK</div><div><div class="nm" data-i18n="rev.1.n">Michał K.</div><div class="car" data-i18n="rev.1.c">BMW M4 Competition</div></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="rev.2.t">„Profesjonalnie od pierwszego kontaktu. Pokazali stan lakieru przed i po — pełna transparentność.”</p>
+        <div class="who"><div class="av">AN</div><div><div class="nm" data-i18n="rev.2.n">Anna N.</div><div class="car" data-i18n="rev.2.c">Audi Q5</div></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p data-i18n="rev.3.t">„Folia PPF na przód i święty spokój. Kamienie odbijają się bez śladu. Polecam każdemu.”</p>
+        <div class="who"><div class="av">PW</div><div><div class="nm" data-i18n="rev.3.n">Paweł W.</div><div class="car" data-i18n="rev.3.c">Porsche 911</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow reveal" data-i18n="contact.eyebrow">Kontakt</span>
+      <h2 class="reveal" data-i18n="contact.title">Umów wizytę</h2>
+      <p class="reveal" data-i18n="contact.sub">Zostaw kontakt i wybierz usługę — oddzwonimy w ciągu 15 minut i zaproponujemy termin oraz bezpłatną wycenę.</p>
+      <div class="info-list">
+        <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div><div><div class="k" data-i18n="contact.phone">Telefon</div><div class="v">+48 500 400 300</div></div></div>
+        <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><div class="k">E-mail</div><div class="v">kontakt@4k-detailing.pl</div></div></div>
+        <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="k" data-i18n="contact.addr">Adres</div><div class="v" data-i18n="contact.addrv">ul. Motoryzacyjna 4, Warszawa</div></div></div>
+        <div class="info-item reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><div class="k" data-i18n="contact.hours">Godziny</div><div class="v" data-i18n="contact.hoursv">Pon–Sob: 8:00 – 20:00</div></div></div>
+      </div>
+      <div class="socials reveal">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.8 3.8 4 4v3c-1.5 0-2.9-.4-4-1.2V15a6 6 0 11-6-6c.3 0 .7 0 1 .1V12a3 3 0 102 2.8V3z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 2a8 8 0 016.8 12.2l-.3.4.6 2.3-2.3-.6-.4.2A8 8 0 1112 4zm-3 4c-.3 0-.6.1-.8.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.4.6 2.9.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.1-1.5-.5-.6-.9-1.4-.8-1.6l.4-.5c.1-.2 0-.4 0-.5l-.7-1.6c-.2-.5-.4-.4-.6-.4z"/></svg></a>
+      </div>
+    </div>
+    <form class="book reveal" id="bookForm">
+      <h3 data-i18n="form.title">Formularz rezerwacji</h3>
+      <p class="sub" data-i18n="form.sub">Wypełnij — reszta po naszej stronie.</p>
+      <div class="row2">
+        <div class="field"><label data-i18n="form.name">Imię</label><input type="text" name="name" required></div>
+        <div class="field"><label data-i18n="form.tel">Telefon</label><input type="tel" name="tel" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label data-i18n="form.car">Marka i model</label><input type="text" name="car" placeholder="BMW M4"></div>
+        <div class="field"><label data-i18n="form.service">Usługa</label>
+          <select name="service">
+            <option data-i18n="form.opt1">Powłoka ceramiczna</option>
+            <option data-i18n="form.opt2">Korekta lakieru</option>
+            <option data-i18n="form.opt3">Folia PPF</option>
+            <option data-i18n="form.opt4">Detailing wnętrza</option>
+            <option data-i18n="form.opt5">Mycie detailingowe</option>
+            <option data-i18n="form.opt6">Inna / konsultacja</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label data-i18n="form.msg">Wiadomość</label><textarea name="msg" data-i18n-ph="form.msgph" placeholder="Opisz stan auta lub oczekiwania…"></textarea></div>
+      <button type="submit" class="btn btn-gold" data-i18n="form.send">Wyślij zgłoszenie</button>
+      <div class="form-note" id="formNote"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo">
+          <svg viewBox="0 0 132 46" style="height:34px"><rect x="44" y="0" width="3" height="46" fill="#D4AF37" opacity=".9"/><rect x="52" y="0" width="3" height="46" fill="#D4AF37" opacity=".9"/><text x="0" y="37" font-family="Oswald,Arial" font-weight="700" font-size="44" fill="#D4AF37">4K</text></svg>
+        </div>
+        <p data-i18n="foot.about">Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5 data-i18n="foot.nav">Nawigacja</h5>
+          <a href="#services" data-i18n="nav.services">Usługi</a>
+          <a href="#work" data-i18n="nav.work">Realizacje</a>
+          <a href="#pricing" data-i18n="nav.pricing">Cennik</a>
+          <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.services">Usługi</h5>
+          <a href="#services" data-i18n="svc.1.t">Powłoki ceramiczne</a>
+          <a href="#services" data-i18n="svc.2.t">Korekta lakieru</a>
+          <a href="#services" data-i18n="svc.3.t">Folia PPF</a>
+          <a href="#services" data-i18n="svc.4.t">Detailing wnętrza</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.contact">Kontakt</h5>
+          <a href="tel:+48500400300">+48 500 400 300</a>
+          <a href="mailto:kontakt@4k-detailing.pl">kontakt@4k-detailing.pl</a>
+          <a href="#contact" data-i18n="contact.addrv">ul. Motoryzacyjna 4, Warszawa</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> 4K Auto Detailing. <span data-i18n="foot.rights">Wszelkie prawa zastrzeżone.</span></span>
+      <span class="zovu" data-i18n-html="foot.zovu">Realizacja: <b>ZOVU</b> Creative Agency</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ i18n ============ */
+const I18N={
+  pl:{
+    "brand.tag":"Auto<br>Detailing",
+    "nav.services":"Usługi","nav.why":"Dlaczego 4K","nav.work":"Realizacje","nav.pricing":"Cennik","nav.reviews":"Opinie","nav.contact":"Kontakt","nav.cta":"Umów wizytę",
+    "hero.eyebrow":"Certyfikowane studio detailingu",
+    "hero.h1":"Twoje auto<span class='l2 gold-text'>w rozdzielczości 4K.</span>",
+    "hero.lead":"Powłoki ceramiczne, korekta lakieru, folia PPF i pełny detailing wnętrza. Sprzęt oraz produkty klasy premium i gwarancja na piśmie.",
+    "hero.cta1":"Umów wizytę","hero.cta2":"Zobacz cennik",
+    "hero.t1":"Gwarancja do 5 lat","hero.t2":"Certyfikowani detailerzy","hero.t3":"2000+ aut rocznie","hero.scroll":"Przewiń",
+    "stats.s1":"Lat na rynku","stats.s2":"Zadbanych aut","stats.s3":"Gwarancji na piśmie","stats.s4":"Średnia ocena",
+    "services.eyebrow":"Co robimy","services.title":"Usługi detailingowe","services.sub":"Kompleksowa pielęgnacja lakieru i wnętrza — od mycia po zaawansowaną ochronę powierzchni.",
+    "svc.more":"Dowiedz się więcej →",
+    "svc.1.t":"Powłoki ceramiczne","svc.1.d":"Ochrona lakieru nawet na 5 lat. Głęboki połysk, efekt hydrofobowy i odporność na zabrudzenia.",
+    "svc.2.t":"Korekta lakieru","svc.2.d":"Wielostopniowa polerka usuwa rysy, hologramy i zmatowienia. Lakier jak spod igły.",
+    "svc.3.t":"Folia ochronna PPF","svc.3.d":"Niewidzialna tarcza przed odpryskami, piaskiem i kamieniami. Samoregenerujący się materiał.",
+    "svc.4.t":"Detailing wnętrza","svc.4.d":"Głębokie czyszczenie, dezynfekcja ozonem i odświeżenie każdego elementu kabiny.",
+    "svc.5.t":"Renowacja skóry","svc.5.d":"Czyszczenie, odżywienie i zabezpieczenie tapicerki skórzanej. Przywracamy kolor i miękkość.",
+    "svc.6.t":"Mycie detailingowe","svc.6.d":"Bezpieczna, wieloetapowa pielęgnacja metodą dwóch wiader. Bez rys i mikrouszkodzeń.",
+    "why.eyebrow":"Dlaczego my","why.title":"Zaufanie w każdym detalu","why.sub":"Traktujemy każde auto jak własne. Jasne warunki, sprawdzone produkty i gwarancja na piśmie — bez niespodzianek.",
+    "why.1.t":"Certyfikowani detailerzy","why.1.d":"Zespół z autoryzacją producentów powłok i realnym doświadczeniem na tysiącach aut.",
+    "why.2.t":"Produkty klasy premium","why.2.d":"Pracujemy wyłącznie na renomowanej chemii i sprzęcie — Gyeon, Koch-Chemie, Rupes.",
+    "why.3.t":"Gwarancja na piśmie","why.3.d":"Każda usługa objęta pisemną gwarancją i kartą powłoki. Wiesz dokładnie, za co płacisz.",
+    "why.4.t":"Odbiór i auto zastępcze","why.4.d":"Podjedziemy po Twój samochód, a na czas prac zaproponujemy auto zastępcze.",
+    "why.badge":"Satysfakcji albo poprawiamy",
+    "proc.eyebrow":"Jak pracujemy","proc.title":"Proces w 5 krokach","proc.sub":"Przejrzysty przebieg prac — wiesz, co dzieje się z Twoim autem na każdym etapie.",
+    "proc.1.t":"Diagnoza lakieru","proc.1.d":"Pomiar grubości powłoki i ocena stanu pod oświetleniem detailingowym.",
+    "proc.2.t":"Bezpieczne mycie","proc.2.d":"Dekontaminacja chemiczna i mechaniczna, mycie bezdotykowe i ręczne.",
+    "proc.3.t":"Korekta i przygotowanie","proc.3.d":"Polerka usuwa wady, powierzchnia zostaje odtłuszczona pod powłokę.",
+    "proc.4.t":"Aplikacja ochrony","proc.4.d":"Nakładamy powłokę ceramiczną lub folię PPF w kontrolowanych warunkach.",
+    "proc.5.t":"Kontrola i odbiór","proc.5.d":"Kontrola jakości, karta gwarancyjna i przekazanie auta w pełnym blasku.",
+    "work.eyebrow":"Efekty","work.title":"Zobacz różnicę","work.sub":"Przeciągnij suwak i zobacz metamorfozę. Przed i po pracach naszego studia.","work.before":"Przed","work.after":"Po",
+    "price.eyebrow":"Cennik","price.title":"Wybierz pakiet","price.sub":"Przejrzyste pakiety dopasowane do stanu i potrzeb Twojego auta. Cena finalna po bezpłatnej wycenie.",
+    "plan.from":"cena od","plan.popular":"Najczęściej wybierany","plan.cta":"Umów wizytę",
+    "plan.1.t":"Start","plan.1.d":"Detailingowe mycie i odświeżenie na już.","plan.1.f1":"Mycie metodą dwóch wiader","plan.1.f2":"Czyszczenie felg i opon","plan.1.f3":"Odkurzanie i detailing wnętrza","plan.1.f4":"Wosk w sprayu na 4 tygodnie",
+    "plan.2.t":"Premium","plan.2.d":"Korekta lakieru i powłoka ceramiczna.","plan.2.f1":"Wszystko z pakietu Start","plan.2.f2":"Jednoetapowa korekta lakieru","plan.2.f3":"Powłoka ceramiczna 2 lata","plan.2.f4":"Gwarancja na piśmie + karta",
+    "plan.3.t":"Concierge","plan.3.d":"Pełna ochrona: PPF, ceramika, wnętrze.","plan.3.price":"Wycena indyw.","plan.3.note":"projekt na miarę","plan.3.f1":"Folia PPF na wybrane elementy","plan.3.f2":"Wieloetapowa korekta lakieru","plan.3.f3":"Powłoka ceramiczna do 5 lat","plan.3.f4":"Odbiór auta i auto zastępcze",
+    "rev.eyebrow":"Opinie","rev.title":"Co mówią klienci","rev.sub":"Średnia ocena 4,9/5 na podstawie setek zrealizowanych zleceń.",
+    "rev.1.t":"„Auto wyglądało lepiej niż z salonu. Powłoka ceramiczna robi robotę, a obsługa na poziomie premium.”","rev.1.n":"Michał K.","rev.1.c":"BMW M4 Competition",
+    "rev.2.t":"„Profesjonalnie od pierwszego kontaktu. Pokazali stan lakieru przed i po — pełna transparentność.”","rev.2.n":"Anna N.","rev.2.c":"Audi Q5",
+    "rev.3.t":"„Folia PPF na przód i święty spokój. Kamienie odbijają się bez śladu. Polecam każdemu.”","rev.3.n":"Paweł W.","rev.3.c":"Porsche 911",
+    "contact.eyebrow":"Kontakt","contact.title":"Umów wizytę","contact.sub":"Zostaw kontakt i wybierz usługę — oddzwonimy w ciągu 15 minut i zaproponujemy termin oraz bezpłatną wycenę.",
+    "contact.phone":"Telefon","contact.addr":"Adres","contact.addrv":"ul. Motoryzacyjna 4, Warszawa","contact.hours":"Godziny","contact.hoursv":"Pon–Sob: 8:00 – 20:00",
+    "form.title":"Formularz rezerwacji","form.sub":"Wypełnij — reszta po naszej stronie.","form.name":"Imię","form.tel":"Telefon","form.car":"Marka i model","form.service":"Usługa","form.msg":"Wiadomość","form.msgph":"Opisz stan auta lub oczekiwania…","form.send":"Wyślij zgłoszenie",
+    "form.opt1":"Powłoka ceramiczna","form.opt2":"Korekta lakieru","form.opt3":"Folia PPF","form.opt4":"Detailing wnętrza","form.opt5":"Mycie detailingowe","form.opt6":"Inna / konsultacja",
+    "form.ok":"Dziękujemy! Oddzwonimy w ciągu 15 minut.",
+    "foot.about":"Studio detailingu premium. Powłoki, korekta lakieru, PPF i pielęgnacja wnętrza z gwarancją na piśmie.","foot.nav":"Nawigacja","foot.services":"Usługi","foot.contact":"Kontakt","foot.rights":"Wszelkie prawa zastrzeżone.","foot.zovu":"Realizacja: <b>ZOVU</b> Creative Agency"
+  },
+  ru:{
+    "brand.tag":"Авто<br>Детейлинг",
+    "nav.services":"Услуги","nav.why":"Почему 4K","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.contact":"Контакты","nav.cta":"Записаться",
+    "hero.eyebrow":"Сертифицированная студия детейлинга",
+    "hero.h1":"Твоё авто<span class='l2 gold-text'>в разрешении 4K.</span>",
+    "hero.lead":"Керамические покрытия, полировка лака, плёнка PPF и полный детейлинг салона. Оборудование и материалы премиум-класса, гарантия в письменном виде.",
+    "hero.cta1":"Записаться","hero.cta2":"Смотреть цены",
+    "hero.t1":"Гарантия до 5 лет","hero.t2":"Сертифицированные мастера","hero.t3":"2000+ авто в год","hero.scroll":"Листайте",
+    "stats.s1":"Лет на рынке","stats.s2":"Обслужено авто","stats.s3":"Гарантия письменно","stats.s4":"Средняя оценка",
+    "services.eyebrow":"Что мы делаем","services.title":"Услуги детейлинга","services.sub":"Комплексный уход за лаком и салоном — от мойки до продвинутой защиты поверхностей.",
+    "svc.more":"Подробнее →",
+    "svc.1.t":"Керамические покрытия","svc.1.d":"Защита лака до 5 лет. Глубокий блеск, гидрофобный эффект и стойкость к загрязнениям.",
+    "svc.2.t":"Полировка лака","svc.2.d":"Многоэтапная полировка убирает царапины, голограммы и матовость. Лак как новый.",
+    "svc.3.t":"Защитная плёнка PPF","svc.3.d":"Невидимый щит от сколов, песка и камней. Самовосстанавливающийся материал.",
+    "svc.4.t":"Детейлинг салона","svc.4.d":"Глубокая чистка, озоновая дезинфекция и освежение каждого элемента салона.",
+    "svc.5.t":"Реставрация кожи","svc.5.d":"Чистка, питание и защита кожаного салона. Возвращаем цвет и мягкость.",
+    "svc.6.t":"Детейлинг-мойка","svc.6.d":"Безопасный многоэтапный уход методом двух вёдер. Без царапин и микроповреждений.",
+    "why.eyebrow":"Почему мы","why.title":"Доверие в каждой детали","why.sub":"Относимся к каждому авто как к своему. Понятные условия, проверенные материалы и гарантия письменно — без сюрпризов.",
+    "why.1.t":"Сертифицированные мастера","why.1.d":"Команда с авторизацией производителей покрытий и реальным опытом на тысячах авто.",
+    "why.2.t":"Материалы премиум-класса","why.2.d":"Работаем только на именитой химии и оборудовании — Gyeon, Koch-Chemie, Rupes.",
+    "why.3.t":"Гарантия письменно","why.3.d":"Каждая услуга с письменной гарантией и картой покрытия. Вы точно знаете, за что платите.",
+    "why.4.t":"Забор авто и подмена","why.4.d":"Заберём ваш автомобиль, а на время работ предложим подменный.",
+    "why.badge":"Довольны или переделаем",
+    "proc.eyebrow":"Как мы работаем","proc.title":"Процесс в 5 шагов","proc.sub":"Прозрачный ход работ — вы знаете, что происходит с авто на каждом этапе.",
+    "proc.1.t":"Диагностика лака","proc.1.d":"Замер толщины покрытия и оценка состояния под детейлинг-светом.",
+    "proc.2.t":"Безопасная мойка","proc.2.d":"Химическая и механическая дезактивация, бесконтактная и ручная мойка.",
+    "proc.3.t":"Полировка и подготовка","proc.3.d":"Полировка убирает дефекты, поверхность обезжиривается под покрытие.",
+    "proc.4.t":"Нанесение защиты","proc.4.d":"Наносим керамику или плёнку PPF в контролируемых условиях.",
+    "proc.5.t":"Контроль и выдача","proc.5.d":"Контроль качества, гарантийная карта и выдача авто в полном блеске.",
+    "work.eyebrow":"Результат","work.title":"Почувствуй разницу","work.sub":"Потяни ползунок и увидь превращение. До и после работ нашей студии.","work.before":"До","work.after":"После",
+    "price.eyebrow":"Цены","price.title":"Выбери пакет","price.sub":"Прозрачные пакеты под состояние и задачи вашего авто. Финальная цена после бесплатной оценки.",
+    "plan.from":"цена от","plan.popular":"Выбирают чаще всего","plan.cta":"Записаться",
+    "plan.1.t":"Старт","plan.1.d":"Детейлинг-мойка и освежение прямо сейчас.","plan.1.f1":"Мойка методом двух вёдер","plan.1.f2":"Чистка дисков и шин","plan.1.f3":"Пылесос и детейлинг салона","plan.1.f4":"Воск-спрей на 4 недели",
+    "plan.2.t":"Премиум","plan.2.d":"Полировка лака и керамическое покрытие.","plan.2.f1":"Всё из пакета Старт","plan.2.f2":"Одноэтапная полировка лака","plan.2.f3":"Керамика на 2 года","plan.2.f4":"Гарантия письменно + карта",
+    "plan.3.t":"Consierge","plan.3.d":"Полная защита: PPF, керамика, салон.","plan.3.price":"Индив. расчёт","plan.3.note":"проект под вас","plan.3.f1":"Плёнка PPF на выбранные детали","plan.3.f2":"Многоэтапная полировка лака","plan.3.f3":"Керамическое покрытие до 5 лет","plan.3.f4":"Забор авто и подменный автомобиль",
+    "rev.eyebrow":"Отзывы","rev.title":"Что говорят клиенты","rev.sub":"Средняя оценка 4,9/5 на основе сотен выполненных заказов.",
+    "rev.1.t":"«Авто выглядело лучше, чем из салона. Керамика делает своё дело, а сервис — премиум-уровня.»","rev.1.n":"Михаил К.","rev.1.c":"BMW M4 Competition",
+    "rev.2.t":"«Профессионально с первого контакта. Показали состояние лака до и после — полная прозрачность.»","rev.2.n":"Анна Н.","rev.2.c":"Audi Q5",
+    "rev.3.t":"«Плёнка PPF на перёд — и полный покой. Камни отскакивают без следа. Рекомендую всем.»","rev.3.n":"Павел В.","rev.3.c":"Porsche 911",
+    "contact.eyebrow":"Контакты","contact.title":"Записаться","contact.sub":"Оставьте контакт и выберите услугу — перезвоним в течение 15 минут, предложим время и бесплатную оценку.",
+    "contact.phone":"Телефон","contact.addr":"Адрес","contact.addrv":"ул. Моторизацийна 4, Варшава","contact.hours":"Часы","contact.hoursv":"Пн–Сб: 8:00 – 20:00",
+    "form.title":"Форма записи","form.sub":"Заполните — остальное на нас.","form.name":"Имя","form.tel":"Телефон","form.car":"Марка и модель","form.service":"Услуга","form.msg":"Сообщение","form.msgph":"Опишите состояние авто или пожелания…","form.send":"Отправить заявку",
+    "form.opt1":"Керамическое покрытие","form.opt2":"Полировка лака","form.opt3":"Плёнка PPF","form.opt4":"Детейлинг салона","form.opt5":"Детейлинг-мойка","form.opt6":"Другое / консультация",
+    "form.ok":"Спасибо! Перезвоним в течение 15 минут.",
+    "foot.about":"Студия премиум-детейлинга. Покрытия, полировка лака, PPF и уход за салоном с гарантией письменно.","foot.nav":"Навигация","foot.services":"Услуги","foot.contact":"Контакты","foot.rights":"Все права защищены.","foot.zovu":"Реализация: <b>ZOVU</b> Creative Agency"
+  },
+  en:{
+    "brand.tag":"Auto<br>Detailing",
+    "nav.services":"Services","nav.why":"Why 4K","nav.work":"Gallery","nav.pricing":"Pricing","nav.reviews":"Reviews","nav.contact":"Contact","nav.cta":"Book now",
+    "hero.eyebrow":"Certified detailing studio",
+    "hero.h1":"Your car<span class='l2 gold-text'>in 4K resolution.</span>",
+    "hero.lead":"Ceramic coatings, paint correction, PPF film and full interior detailing. Premium-grade equipment and products, with a written guarantee.",
+    "hero.cta1":"Book now","hero.cta2":"See pricing",
+    "hero.t1":"Up to 5-year warranty","hero.t2":"Certified detailers","hero.t3":"2000+ cars a year","hero.scroll":"Scroll",
+    "stats.s1":"Years in business","stats.s2":"Cars detailed","stats.s3":"Written warranty","stats.s4":"Average rating",
+    "services.eyebrow":"What we do","services.title":"Detailing services","services.sub":"Complete paint and interior care — from washing to advanced surface protection.",
+    "svc.more":"Learn more →",
+    "svc.1.t":"Ceramic coatings","svc.1.d":"Paint protection for up to 5 years. Deep gloss, hydrophobic effect and dirt resistance.",
+    "svc.2.t":"Paint correction","svc.2.d":"Multi-stage polishing removes scratches, holograms and dullness. Paint like new.",
+    "svc.3.t":"PPF protective film","svc.3.d":"An invisible shield against chips, sand and stones. Self-healing material.",
+    "svc.4.t":"Interior detailing","svc.4.d":"Deep cleaning, ozone disinfection and refresh of every cabin element.",
+    "svc.5.t":"Leather restoration","svc.5.d":"Cleaning, nourishing and protecting leather upholstery. We bring back colour and softness.",
+    "svc.6.t":"Detailing wash","svc.6.d":"Safe, multi-stage two-bucket care. No swirls, no micro-damage.",
+    "why.eyebrow":"Why us","why.title":"Trust in every detail","why.sub":"We treat every car as our own. Clear terms, proven products and a written guarantee — no surprises.",
+    "why.1.t":"Certified detailers","why.1.d":"A team authorised by coating manufacturers with real experience on thousands of cars.",
+    "why.2.t":"Premium-grade products","why.2.d":"We work exclusively with renowned chemistry and tools — Gyeon, Koch-Chemie, Rupes.",
+    "why.3.t":"Written guarantee","why.3.d":"Every service comes with a written warranty and coating card. You know exactly what you pay for.",
+    "why.4.t":"Pick-up & courtesy car","why.4.d":"We'll collect your car and offer a courtesy vehicle while we work.",
+    "why.badge":"Satisfaction or we redo it",
+    "proc.eyebrow":"How we work","proc.title":"The 5-step process","proc.sub":"A transparent workflow — you know what happens to your car at every stage.",
+    "proc.1.t":"Paint diagnosis","proc.1.d":"Coating thickness measurement and condition check under detailing light.",
+    "proc.2.t":"Safe wash","proc.2.d":"Chemical and mechanical decontamination, touchless and hand washing.",
+    "proc.3.t":"Correction & prep","proc.3.d":"Polishing removes defects, the surface is degreased for coating.",
+    "proc.4.t":"Protection applied","proc.4.d":"We apply ceramic coating or PPF film in controlled conditions.",
+    "proc.5.t":"Check & handover","proc.5.d":"Quality control, warranty card and handover of your car in full shine.",
+    "work.eyebrow":"Results","work.title":"See the difference","work.sub":"Drag the slider and watch the transformation. Before and after our studio's work.","work.before":"Before","work.after":"After",
+    "price.eyebrow":"Pricing","price.title":"Choose a package","price.sub":"Transparent packages matched to your car's condition and needs. Final price after a free quote.",
+    "plan.from":"from","plan.popular":"Most popular","plan.cta":"Book now",
+    "plan.1.t":"Start","plan.1.d":"Detailing wash and a refresh right now.","plan.1.f1":"Two-bucket wash method","plan.1.f2":"Wheel and tyre cleaning","plan.1.f3":"Vacuum and interior detailing","plan.1.f4":"Spray wax for 4 weeks",
+    "plan.2.t":"Premium","plan.2.d":"Paint correction and ceramic coating.","plan.2.f1":"Everything in Start","plan.2.f2":"Single-stage paint correction","plan.2.f3":"2-year ceramic coating","plan.2.f4":"Written guarantee + card",
+    "plan.3.t":"Concierge","plan.3.d":"Full protection: PPF, ceramic, interior.","plan.3.price":"Custom quote","plan.3.note":"tailor-made project","plan.3.f1":"PPF film on selected parts","plan.3.f2":"Multi-stage paint correction","plan.3.f3":"Ceramic coating up to 5 years","plan.3.f4":"Car pick-up and courtesy car",
+    "rev.eyebrow":"Reviews","rev.title":"What clients say","rev.sub":"Average rating 4.9/5 based on hundreds of completed jobs.",
+    "rev.1.t":"“The car looked better than showroom. The ceramic coating does the job and the service is premium.”","rev.1.n":"Michael K.","rev.1.c":"BMW M4 Competition",
+    "rev.2.t":"“Professional from the first contact. They showed the paint condition before and after — full transparency.”","rev.2.n":"Anna N.","rev.2.c":"Audi Q5",
+    "rev.3.t":"“PPF on the front and total peace of mind. Stones bounce off without a trace. Highly recommend.”","rev.3.n":"Paul W.","rev.3.c":"Porsche 911",
+    "contact.eyebrow":"Contact","contact.title":"Book your visit","contact.sub":"Leave your details and pick a service — we'll call back within 15 minutes with a slot and a free quote.",
+    "contact.phone":"Phone","contact.addr":"Address","contact.addrv":"4 Motoryzacyjna St, Warsaw","contact.hours":"Hours","contact.hoursv":"Mon–Sat: 8:00 – 20:00",
+    "form.title":"Booking form","form.sub":"Fill it in — we'll take it from there.","form.name":"Name","form.tel":"Phone","form.car":"Make & model","form.service":"Service","form.msg":"Message","form.msgph":"Describe your car's condition or expectations…","form.send":"Send request",
+    "form.opt1":"Ceramic coating","form.opt2":"Paint correction","form.opt3":"PPF film","form.opt4":"Interior detailing","form.opt5":"Detailing wash","form.opt6":"Other / consultation",
+    "form.ok":"Thank you! We'll call you back within 15 minutes.",
+    "foot.about":"Premium detailing studio. Coatings, paint correction, PPF and interior care with a written guarantee.","foot.nav":"Navigation","foot.services":"Services","foot.contact":"Contact","foot.rights":"All rights reserved.","foot.zovu":"Made by <b>ZOVU</b> Creative Agency"
+  }
+};
+
+function applyLang(lang){
+  const dict=I18N[lang]||I18N.pl;
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(dict[k]!=null)el.textContent=dict[k];});
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.getAttribute('data-i18n-html');if(dict[k]!=null)el.innerHTML=dict[k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(dict[k]!=null)el.setAttribute('placeholder',dict[k]);});
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  try{localStorage.setItem('4k_lang',lang);}catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+let savedLang='pl';try{savedLang=localStorage.getItem('4k_lang')||'pl';}catch(e){}
+applyLang(savedLang);
+
+/* ============ NAV ============ */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
+const burger=document.getElementById('burger'),navlinks=document.getElementById('navlinks');
+burger.addEventListener('click',()=>navlinks.classList.toggle('open'));
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+/* ============ YEAR ============ */
+document.getElementById('year').textContent=new Date().getFullYear();
+
+/* ============ REVEAL ============ */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ============ COUNTERS ============ */
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+function count(el){
+  const target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.decimals||'0'),suf=el.dataset.suffix||'';
+  const dur=1400,t0=performance.now();
+  function tick(t){
+    let p=Math.min((t-t0)/dur,1);p=1-Math.pow(1-p,3);
+    let val=target*p;
+    let out=dec?val.toFixed(dec):Math.round(val).toLocaleString('pl-PL');
+    el.textContent=out+suf;
+    if(p<1)requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* ============ BEFORE / AFTER ============ */
+document.querySelectorAll('[data-ba]').forEach(ba=>{
+  const before=ba.querySelector('[data-before]'),handle=ba.querySelector('[data-handle]');
+  let dragging=false;
+  function set(x){
+    const r=ba.getBoundingClientRect();
+    let pct=((x-r.left)/r.width)*100;pct=Math.max(2,Math.min(98,pct));
+    before.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    handle.style.left=pct+'%';
+  }
+  const start=()=>dragging=true,end=()=>dragging=false;
+  ba.addEventListener('mousedown',e=>{start();set(e.clientX);});
+  addEventListener('mousemove',e=>{if(dragging)set(e.clientX);});
+  addEventListener('mouseup',end);
+  ba.addEventListener('touchstart',e=>{start();set(e.touches[0].clientX);},{passive:true});
+  ba.addEventListener('touchmove',e=>{if(dragging)set(e.touches[0].clientX);},{passive:true});
+  addEventListener('touchend',end);
+});
+
+/* ============ FORM ============ */
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const lang=document.documentElement.lang;
+  document.getElementById('formNote').textContent=(I18N[lang]||I18N.pl)['form.ok'];
+  e.target.reset();
+});
+</script>
+</body>
+</html>
