@@ -397,7 +397,7 @@
       <a href="#contact" data-i18n="nav.contact">Kontakt</a>
       <div style="display:flex;gap:12px;margin-top:8px">
         <div class="lang mobile-lang">
-          <button data-lang="es">ES</button><button data-lang="en">EN</button>
+          <button data-lang="es">ES</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
         </div>
         <div class="theme-sw lang mobile-lang">
           <button data-theme-set="light" aria-label="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg></button><button data-theme-set="dark" aria-label="Dark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></button>
@@ -409,7 +409,7 @@
         <button data-theme-set="light" aria-label="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg></button><button data-theme-set="dark" aria-label="Dark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></button>
       </div>
       <div class="lang desktop">
-        <button data-lang="es">ES</button><button data-lang="en">EN</button>
+        <button data-lang="es">ES</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
       </div>
       <a href="#contact" class="btn btn-gold" style="padding:11px 22px" data-i18n="nav.cta">Umów wizytę</a>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -850,8 +850,8 @@ const I18N={
     "proc.5.t":"Handover with warranty","proc.5.d":"We return your car with a warranty card and a full record of the work.",
     "gb.title":"A written warranty — on every repair","gb.sub":"We don't just promise. Every service and part is confirmed with a warranty card and a record of the work. Something wrong? We fix it at our cost.",
     "work.eyebrow":"Our work","work.title":"Our work","work.sub":"See how a car looks before and after a service at our workshop.","work.before":"Before","work.after":"After",
-    "price.eyebrow":"Pricing","price.title":"Service pricing","price.sub":"Transparent prices for common services. Labour rate from $42/h. Repair costs are always confirmed with a quote before we start.",
-    "plan.from":"from","plan.popular":"Most popular","plan.cta":"Book now","plan.1.price":"$32","plan.2.price":"$90",
+    "price.eyebrow":"Pricing","price.title":"Service pricing","price.sub":"Transparent prices for common services. Labour rate from 40 €/h. Repair costs are always confirmed with a quote before we start.",
+    "plan.from":"from","plan.popular":"Most popular","plan.cta":"Book now","plan.1.price":"30 €","plan.2.price":"85 €",
     "plan.1.t":"Diagnostics","plan.1.d":"Full check and fault-code reading.","plan.1.f1":"Computer diagnostics","plan.1.f2":"Fault-code read & reset","plan.1.f3":"Technical condition assessment","plan.1.f4":"Report and recommendations",
     "plan.2.t":"Periodic service","plan.2.d":"Seasonal servicing for your car.","plan.2.f1":"Everything in Diagnostics","plan.2.f2":"Oil and filter change","plan.2.f3":"Fluids and brakes check","plan.2.f4":"Warranty on the work done",
     "plan.3.t":"Full service","plan.3.d":"Repairs based on your car's needs.","plan.3.price":"Custom quote","plan.3.note":"after diagnosis","plan.3.f1":"Mechanics and repairs","plan.3.f2":"Original or trusted parts","plan.3.f3":"Courtesy car during the repair","plan.3.f4":"Written warranty on repairs",
@@ -865,6 +865,63 @@ const I18N={
     "form.opt1":"Computer diagnostics","form.opt2":"Mechanics & repair","form.opt3":"Servicing & maintenance","form.opt4":"Oil change","form.opt5":"Tyre service","form.opt6":"A/C / electrics",
     "form.ok":"Thank you! We'll call you back within 15 minutes.",
     "foot.about":"Trusted auto service. Diagnostics, mechanics, servicing and repairs with an honest quote and a warranty on repairs.","foot.nav":"Navigation","foot.services":"Services","foot.contact":"Contact","foot.rights":"All rights reserved.","foot.zovu":"Made by <b>ZOVU</b> Creative Agency"
+  },
+  ru:{
+    "brand.tag":"Авто Сервис",
+    "nav.services":"Услуги","nav.why":"Почему 4K","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.faq":"Вопросы","nav.contact":"Контакты","nav.cta":"Записаться",
+    "brands.label":"Работаем с оригинальными запчастями и проверенными брендами",
+    "case.1":"Ремонт двигателя","case.2":"Подвеска и тормоза","case.3":"Компьютерная диагностика","case.4":"Обслуживание кондиционера",
+    "faq.eyebrow":"Вопросы","faq.title":"Частые вопросы","faq.sub":"Всё, что стоит знать перед визитом. Не нашли ответ? Позвоните нам.",
+    "faq.1.q":"Дадите смету до начала ремонта?","faq.1.a":"Да. Мы всегда согласовываем объём работ и стоимость до вашего одобрения. Без вашего согласия работы не начинаем — никаких сюрпризов в счёте.",
+    "faq.2.q":"Есть ли гарантия на ремонт?","faq.2.a":"Да. На каждую услугу и установленную деталь даём письменную гарантию и полный отчёт о выполненных работах.",
+    "faq.3.q":"Какие запчасти вы используете?","faq.3.a":"Ставим оригинальные детали (OEM) или проверенные аналоги известных брендов — под ваши ожидания и бюджет.",
+    "faq.4.q":"Сколько длится ремонт?","faq.4.a":"Простое обслуживание и диагностику обычно делаем в тот же день. По крупному ремонту даём смету и срок после точной диагностики.",
+    "faq.5.q":"Есть ли подменный автомобиль?","faq.5.a":"Да. При крупном ремонте предоставляем подменный автомобиль и при необходимости заберём вашу машину в черте города.",
+    "foot.company":"4K Serwis Sp. z o.o. · ИНН 000-000-00-00 · REGON 000000000",
+    "hero.eyebrow":"Надёжный автосервис",
+    "hero.h1":"Ваш автомобиль<span class='l2 gold-text'>в разрешении 4K.</span>",
+    "hero.lead":"Точная компьютерная диагностика, механика, ТО и обслуживание. Честная смета до начала работ и гарантия на каждый ремонт.",
+    "hero.cta1":"Записаться","hero.cta2":"Смотреть цены",
+    "hero.t1":"Гарантия на ремонт","hero.t2":"Честная смета","hero.t3":"Оригинальные запчасти","hero.scroll":"Листайте",
+    "stats.s1":"Лет на рынке","stats.s2":"Обслужено машин","stats.s3":"Ремонтов с гарантией","stats.s4":"Средняя оценка",
+    "services.eyebrow":"Что мы делаем","services.title":"Сервис и ремонт","services.sub":"Полный уход за автомобилем в одном месте — от диагностики и механики до ТО и шиномонтажа.",
+    "svc.more":"Подробнее →",
+    "band.eyebrow":"Доверие","band.h":"Честная смета.<br>Письменная гарантия.",
+    "svc.1.t":"Компьютерная диагностика","svc.1.d":"Точное считывание ошибок и полная проверка состояния автомобиля. Вы точно знаете, что и зачем чинить.",
+    "svc.2.t":"Механика и ремонт","svc.2.d":"Двигатель, подвеска, тормоза, ГРМ. Ремонт по уму, на деталях с гарантией.",
+    "svc.3.t":"ТО и обслуживание","svc.3.d":"Плановое и сезонное ТО плюс полное обслуживание. Ваш автомобиль готов к каждому километру.",
+    "svc.4.t":"Замена масла и фильтров","svc.4.d":"Масла, фильтры и жидкости известных брендов. Быстрая и безопасная замена на месте.",
+    "svc.5.t":"Шиномонтаж","svc.5.d":"Монтаж, балансировка, ремонт и сезонное хранение шин и дисков.",
+    "svc.6.t":"Кондиционер и электрика","svc.6.d":"Обслуживание и дезинфекция кондиционера, диагностика электроники и проводки.",
+    "why.eyebrow":"Почему мы","why.title":"Доверие в каждой детали","why.sub":"Относимся к каждому автомобилю как к своему. Понятная смета, проверенные детали и гарантия на ремонт — без сюрпризов и навязывания.",
+    "why.1.t":"Честная диагностика","why.1.d":"Показываем неисправности и объясняем, что и зачем чинить. Ремонтируем то, что действительно нужно.",
+    "why.2.t":"Смета до начала работ","why.2.d":"Вы одобряете объём и стоимость до старта. Никаких скрытых пунктов в счёте.",
+    "why.3.t":"Гарантия на ремонт","why.3.d":"На каждую услугу и установленную деталь — письменная гарантия и отчёт о работах.",
+    "why.4.t":"Забор авто и подмена","why.4.d":"Заберём вашу машину и предоставим подменный автомобиль при крупном ремонте.",
+    "why.badge":"Ремонтов с гарантией",
+    "proc.eyebrow":"Как мы работаем","proc.title":"Процесс из 5 шагов","proc.sub":"Прозрачный процесс — вы знаете, что происходит с автомобилем на каждом этапе.",
+    "proc.1.t":"Диагностика и приёмка","proc.1.d":"Компьютерная диагностика и осмотр. Определяем реальное состояние и потребности автомобиля.",
+    "proc.2.t":"Смета и согласование","proc.2.d":"Представляем объём работ, детали и стоимость. Начинаем только после вашего одобрения.",
+    "proc.3.t":"Ремонт","proc.3.d":"Выполняем работы на проверенных деталях, по согласованию и на совесть.",
+    "proc.4.t":"Контроль качества","proc.4.d":"Проверяем результат и безопасность автомобиля перед выдачей.",
+    "proc.5.t":"Выдача с гарантией","proc.5.d":"Возвращаем автомобиль с гарантийным талоном и полным отчётом о работах.",
+    "gb.title":"Письменная гарантия — на каждый ремонт","gb.sub":"Мы не просто обещаем. Каждая услуга и деталь подтверждается гарантийным талоном и отчётом о работах. Что-то не так? Исправим за свой счёт.",
+    "work.eyebrow":"Работы","work.title":"Наши работы","work.sub":"Посмотрите, как выглядит автомобиль до и после нашего сервиса.","work.before":"До","work.after":"После",
+    "price.eyebrow":"Цены","price.title":"Цены на услуги","price.sub":"Прозрачные цены на частые услуги. Нормо-час от 40 €/ч. Стоимость ремонта всегда подтверждается сметой до начала работ.",
+    "plan.from":"от","plan.popular":"Выбирают чаще всего","plan.cta":"Записаться","plan.1.price":"30 €","plan.2.price":"85 €",
+    "plan.1.t":"Диагностика","plan.1.d":"Полная проверка и считывание ошибок.","plan.1.f1":"Компьютерная диагностика","plan.1.f2":"Считывание и сброс ошибок","plan.1.f3":"Оценка технического состояния","plan.1.f4":"Отчёт и рекомендации",
+    "plan.2.t":"Плановое ТО","plan.2.d":"Сезонное обслуживание автомобиля.","plan.2.f1":"Всё из «Диагностики»","plan.2.f2":"Замена масла и фильтра","plan.2.f3":"Проверка жидкостей и тормозов","plan.2.f4":"Гарантия на выполненные работы",
+    "plan.3.t":"Комплексный сервис","plan.3.d":"Ремонт под потребности автомобиля.","plan.3.price":"Индивидуальный расчёт","plan.3.note":"после диагностики","plan.3.f1":"Механика и ремонт","plan.3.f2":"Оригинальные или проверенные детали","plan.3.f3":"Подменный автомобиль на время ремонта","plan.3.f4":"Письменная гарантия на ремонт",
+    "rev.eyebrow":"Отзывы","rev.title":"Что говорят клиенты","rev.sub":"Средняя оценка 4,9/5 на основе сотен обслуженных автомобилей.",
+    "rev.1.t":"«Нашли неисправность, которую пропустили три других сервиса. Всё понятно и честно.»","rev.1.n":"Михал К.","rev.1.c":"BMW 3 серии",
+    "rev.2.t":"«Смета совпала со счётом до копейки. Наконец-то сервис, которому я доверяю.»","rev.2.n":"Анна Н.","rev.2.c":"Audi Q5",
+    "rev.3.t":"«Ремонт с гарантией и подменный автомобиль вовремя. Полный профессионализм и быстрая связь.»","rev.3.n":"Павел В.","rev.3.c":"VW Passat",
+    "contact.eyebrow":"Контакты","contact.title":"Запишитесь на визит","contact.sub":"Оставьте данные и опишите проблему — перезвоним в течение 15 минут, чтобы согласовать время и диагностику.",
+    "contact.phone":"Телефон","contact.addr":"Адрес","contact.addrv":"ул. Варштатова 4, Варшава","contact.hours":"Часы работы","contact.hoursv":"Пн–Сб: 8:00 – 19:00",
+    "form.title":"Форма заявки","form.sub":"Заполните — остальное сделаем мы.","form.name":"Имя","form.tel":"Телефон","form.car":"Марка и модель","form.service":"Услуга","form.msg":"Описание проблемы","form.msgph":"Опишите симптомы или объём работ…","form.send":"Отправить заявку",
+    "form.opt1":"Компьютерная диагностика","form.opt2":"Механика и ремонт","form.opt3":"ТО и обслуживание","form.opt4":"Замена масла","form.opt5":"Шиномонтаж","form.opt6":"Кондиционер / электрика",
+    "form.ok":"Спасибо! Перезвоним в течение 15 минут.",
+    "foot.about":"Надёжный автосервис. Диагностика, механика, ТО и ремонт с честной сметой и гарантией на ремонт.","foot.nav":"Навигация","foot.services":"Услуги","foot.contact":"Контакты","foot.rights":"Все права защищены.","foot.zovu":"Сделано <b>ZOVU</b> Creative Agency"
   }
 };
 
