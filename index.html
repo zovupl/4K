@@ -97,6 +97,24 @@
   :root[data-theme="light"] .hero-bg .g2{background:radial-gradient(circle,rgba(169,129,42,.12),transparent 70%)}
   :root[data-theme="light"] .btn-ghost{background:rgba(26,20,10,.02)}
   :root[data-theme="light"] .map-band{filter:grayscale(.1) contrast(1)}
+  /* Светлая тема: hero и навбар стоят на ТЁМНОМ фото — держим светлый текст */
+  :root[data-theme="light"] .hero{
+    --text:#f2eee2;--muted:#dcd6c8;
+    --gold:#eaca6b;--gold-bright:#F6E3A0;
+    --grad-gold:linear-gradient(135deg,#F6E3A0 0%,#E6C868 22%,#D4AF37 52%,#C79A32 100%)
+  }
+  :root[data-theme="light"] header.nav{
+    --muted:#e4dfd2;--gold:#eaca6b;--gold-bright:#F6E3A0;
+    --grad-gold:linear-gradient(135deg,#F6E3A0 0%,#E6C868 22%,#D4AF37 52%,#C79A32 100%)
+  }
+  /* При прокрутке навбар получает светлый фон — возвращаем тёмный текст */
+  :root[data-theme="light"] header.nav.scrolled{
+    --muted:#6b6459;--gold:#a9812a;--gold-bright:#8a6a1e;
+    --grad-gold:linear-gradient(135deg,#c79a32 0%,#a9812a 50%,#7e5f1c 100%)
+  }
+  /* Мобильное меню открыто (светлый фон) — тёмные ссылки */
+  :root[data-theme="light"] nav.links.open a{color:#3a352c}
+  :root[data-theme="light"] nav.links.open a:hover{color:#a9812a}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
@@ -115,16 +133,6 @@
   .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:3.5px;font-size:12.5px;font-weight:500;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
   .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
   .section{padding:112px 0;position:relative}
-  /* Светлый блок внутри тёмной темы — переопределяет палитру локально */
-  section.light{
-    --bg:#f6f2ea;--bg-2:#ffffff;--bg-3:#efe9dd;--card:#ffffff;
-    --text:#1b1710;--muted:#6b6459;--muted-2:#948d80;
-    --line:rgba(169,129,42,.30);--line-soft:rgba(20,16,8,.10);
-    --gold:#a9812a;--gold-bright:#8a6a1e;--gold-deep:#6e521a;
-    --grad-gold:linear-gradient(135deg,#c79a32 0%,#a9812a 50%,#7e5f1c 100%);
-    background:var(--bg);color:var(--text);
-    border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)
-  }
   .section-head{max-width:640px;margin:0 auto 60px;text-align:center}
   .section-head h2{font-size:clamp(30px,5vw,50px);text-transform:uppercase;margin:16px 0 14px}
   .section-head p{color:var(--muted);font-size:17px}
@@ -174,7 +182,7 @@
   .hero-bg .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 70% at 60% 40%,#000 30%,transparent 75%)}
   .hero-emblem{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(64vw,720px);z-index:0;opacity:.2;pointer-events:none;user-select:none;filter:drop-shadow(0 0 70px rgba(212,175,55,.2))}
   .hero-inner{position:relative;z-index:2;width:100%;max-width:1200px}
-  .hero h1{max-width:720px}
+  .hero h1{max-width:720px;color:var(--text)}
   .hero h1{font-size:clamp(44px,7.5vw,92px);text-transform:uppercase;margin:22px 0 22px;font-weight:700}
   .hero h1 .l2{display:block}
   .hero p.lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:600px;margin-bottom:36px}
@@ -589,7 +597,7 @@
 </section>
 
 <!-- ============ PRICING ============ -->
-<section class="section light" id="pricing">
+<section class="section" id="pricing">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="price.eyebrow">Cennik</span>
@@ -670,7 +678,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section light" id="faq">
+<section class="section" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="faq.eyebrow">FAQ</span>
