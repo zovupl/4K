@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zovupl.github.io/4K/sitemap.xml
