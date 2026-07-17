@@ -115,6 +115,16 @@
   .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:3.5px;font-size:12.5px;font-weight:500;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
   .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
   .section{padding:112px 0;position:relative}
+  /* Светлый блок внутри тёмной темы — переопределяет палитру локально */
+  section.light{
+    --bg:#f6f2ea;--bg-2:#ffffff;--bg-3:#efe9dd;--card:#ffffff;
+    --text:#1b1710;--muted:#6b6459;--muted-2:#948d80;
+    --line:rgba(169,129,42,.30);--line-soft:rgba(20,16,8,.10);
+    --gold:#a9812a;--gold-bright:#8a6a1e;--gold-deep:#6e521a;
+    --grad-gold:linear-gradient(135deg,#c79a32 0%,#a9812a 50%,#7e5f1c 100%);
+    background:var(--bg);color:var(--text);
+    border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)
+  }
   .section-head{max-width:640px;margin:0 auto 60px;text-align:center}
   .section-head h2{font-size:clamp(30px,5vw,50px);text-transform:uppercase;margin:16px 0 14px}
   .section-head p{color:var(--muted);font-size:17px}
@@ -473,17 +483,6 @@
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12a8 8 0 10-8 8"/><path d="M12 6v6l4 2"/></svg><span data-i18n="hero.t3">2000+ aut rocznie</span></span>
     </div>
   </div>
-  <div class="scroll-ind"><div class="mouse"></div><span data-i18n="hero.scroll">Przewiń</span></div>
-</section>
-
-<!-- ============ STATS ============ -->
-<section class="stats">
-  <div class="wrap">
-    <div class="stat reveal"><div class="num gold-text" data-count="9">0</div><div class="lbl" data-i18n="stats.s1">Lat na rynku</div></div>
-    <div class="stat reveal"><div class="num gold-text" data-count="12000" data-suffix="+">0</div><div class="lbl" data-i18n="stats.s2">Zadbanych aut</div></div>
-    <div class="stat reveal"><div class="num gold-text" data-count="100" data-suffix="%">0</div><div class="lbl" data-i18n="stats.s3">Gwarancji na piśmie</div></div>
-    <div class="stat reveal"><div class="num gold-text" data-count="4.9" data-decimals="1">0</div><div class="lbl" data-i18n="stats.s4">Średnia ocena</div></div>
-  </div>
 </section>
 
 <!-- ============ SERVICES ============ -->
@@ -590,7 +589,7 @@
 </section>
 
 <!-- ============ PRICING ============ -->
-<section class="section" id="pricing">
+<section class="section light" id="pricing">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="price.eyebrow">Cennik</span>
@@ -671,7 +670,7 @@
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section" id="faq">
+<section class="section light" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="faq.eyebrow">FAQ</span>
