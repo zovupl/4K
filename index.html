@@ -106,12 +106,11 @@
   /* дорога, по которой едет машина */
   #loader .road{position:relative;width:min(760px,86vw);height:clamp(90px,16vw,150px)}
   #loader .car{position:absolute;bottom:14px;left:0;width:clamp(150px,26vw,230px);
-    transform:translateX(calc(var(--p,0) * (min(760px,86vw) - clamp(150px,26vw,230px))));
-    transition:transform .45s cubic-bezier(.25,.8,.3,1)}
+    transform:translateX(calc(var(--p,0) * (min(760px,86vw) - clamp(150px,26vw,230px))));will-change:transform}
   #loader .line{position:absolute;left:0;right:0;bottom:8px;height:2px;
     background:repeating-linear-gradient(90deg,rgba(255,255,255,.22) 0 22px,transparent 22px 44px)}
   #loader .line i{position:absolute;left:0;top:0;bottom:0;width:calc(var(--p,0) * 100%);
-    background:linear-gradient(90deg,#FF8A3D,#F05818);transition:width .45s ease}
+    background:linear-gradient(90deg,#FF8A3D,#F05818);will-change:width}
   #loader .pct{font-family:'Oswald',sans-serif;font-size:clamp(13px,2.2vw,16px);letter-spacing:4px;color:#8b8b93}
   #loader .pct b{color:#F05818;font-weight:600}
   @keyframes ld-in{to{opacity:1}}
@@ -624,10 +623,10 @@
       </div>
     </div>
     <div class="gallery">
-      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case1.jpg') center/cover"><span class="cap"><b>Chevrolet Nova SS</b><span data-i18n="case.1">Serwis silnika</span></span></div>
-      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case2.jpg') center/cover"><span class="cap"><b>Chevrolet Nova SS</b><span data-i18n="case.2">Zawieszenie i hamulce</span></span></div>
-      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case3.jpg') center/cover"><span class="cap"><b>Chevrolet Nova SS</b><span data-i18n="case.3">Diagnostyka komputerowa</span></span></div>
-      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case4.jpg') center/cover"><span class="cap"><b>Nuestro taller</b><span data-i18n="case.4">Serwis klimatyzacji</span></span></div>
+      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case1.jpg') center/cover"><span class="cap"><b data-i18n="case.1b">Turismos diésel</b><span data-i18n="case.1">Serwis silnika</span></span></div>
+      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case2.jpg') center/cover"><span class="cap"><b data-i18n="case.2b">Furgonetas</b><span data-i18n="case.2">Zawieszenie i hamulce</span></span></div>
+      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case3.jpg') center/cover"><span class="cap"><b data-i18n="case.3b">Diagnóstico</b><span data-i18n="case.3">Diagnostyka komputerowa</span></span></div>
+      <div class="shot reveal" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent 55%),url('assets/case4.jpg') center/cover"><span class="cap"><b data-i18n="case.4b">Dirección</b><span data-i18n="case.4">Serwis klimatyzacji</span></span></div>
     </div>
   </div>
 </section>
@@ -835,7 +834,7 @@ const I18N={
     "brand.tag":"Barcelona",
     "nav.services":"Servicios","nav.why":"Por qué","nav.work":"Trabajos","nav.pricing":"Precios","nav.reviews":"Opiniones","nav.faq":"FAQ","nav.contact":"Contacto","nav.cta":"Reservar cita",
     "brands.label":"Trabajamos con piezas originales y marcas de confianza",
-    "case.1":"Proyecto propio del taller","case.2":"En el taller, cada día","case.3":"Restauración y puesta a punto","case.4":"Sant Andreu, Barcelona",
+    "case.1b":"Turismos diésel","case.1":"Revisión en elevador","case.2b":"Furgonetas","case.2":"Servicio y diagnóstico","case.3b":"Diagnóstico","case.3":"Lectura de averías","case.4b":"Dirección","case.4":"Alineación de ruedas",
     "faq.eyebrow":"FAQ","faq.title":"Preguntas frecuentes","faq.sub":"Todo lo que conviene saber antes de tu visita. ¿No encuentras respuesta? Llámanos.",
     "faq.1.q":"¿Recibiré un presupuesto antes de la reparación?","faq.1.a":"Sí. Siempre acordamos el alcance y el coste para tu aprobación. No empezamos sin tu visto bueno: sin sorpresas en la factura.",
     "faq.2.q":"¿Ofrecéis garantía en las reparaciones?","faq.2.a":"Sí. Cada servicio y pieza montada incluye una garantía por escrito y un registro completo del trabajo realizado.",
@@ -892,7 +891,7 @@ const I18N={
     "brand.tag":"Barcelona",
     "nav.services":"Services","nav.why":"Why us","nav.work":"Gallery","nav.pricing":"Pricing","nav.reviews":"Reviews","nav.faq":"FAQ","nav.contact":"Contact","nav.cta":"Book now",
     "brands.label":"We work with original parts and trusted brands",
-    "case.1":"Our own project car","case.2":"In the workshop, every day","case.3":"Restoration and tuning","case.4":"Sant Andreu, Barcelona",
+    "case.1b":"Diesel cars","case.1":"Inspection on the lift","case.2b":"Vans","case.2":"Service and diagnostics","case.3b":"Diagnostics","case.3":"Fault-code reading","case.4b":"Steering","case.4":"Wheel alignment",
     "faq.eyebrow":"FAQ","faq.title":"Frequently asked questions","faq.sub":"Everything worth knowing before your visit. Didn't find an answer? Call us.",
     "faq.1.q":"Will I get a quote before the repair?","faq.1.a":"Yes. We always agree the scope and cost for your approval. We don't start work without your go-ahead — no surprises on the invoice.",
     "faq.2.q":"Do you guarantee your repairs?","faq.2.a":"Yes. Every service and fitted part comes with a written warranty and a full record of the work done.",
@@ -949,7 +948,7 @@ const I18N={
     "brand.tag":"Барселона",
     "nav.services":"Услуги","nav.why":"Почему мы","nav.work":"Работы","nav.pricing":"Цены","nav.reviews":"Отзывы","nav.faq":"Вопросы","nav.contact":"Контакты","nav.cta":"Записаться",
     "brands.label":"Работаем с оригинальными запчастями и проверенными брендами",
-    "case.1":"Собственный проект мастерской","case.2":"В цеху, каждый день","case.3":"Реставрация и настройка","case.4":"Сант-Андреу, Барселона",
+    "case.1b":"Дизельные легковые","case.1":"Осмотр на подъёмнике","case.2b":"Фургоны","case.2":"Обслуживание и диагностика","case.3b":"Диагностика","case.3":"Считывание ошибок","case.4b":"Рулевое","case.4":"Сход-развал",
     "faq.eyebrow":"Вопросы","faq.title":"Частые вопросы","faq.sub":"Всё, что стоит знать перед визитом. Не нашли ответ? Позвоните нам.",
     "faq.1.q":"Дадите смету до начала ремонта?","faq.1.a":"Да. Мы всегда согласовываем объём работ и стоимость до вашего одобрения. Без вашего согласия работы не начинаем — никаких сюрпризов в счёте.",
     "faq.2.q":"Есть ли гарантия на ремонт?","faq.2.a":"Да. На каждую услугу и установленную деталь даём письменную гарантию и полный отчёт о выполненных работах.",
@@ -1036,24 +1035,29 @@ applyTheme(savedTheme);
   var total=imgs.length+1;           // +1 — само событие load страницы
   var done=0, shown=0, finished=false;
 
+  var target=0, t0=performance.now();
   function paint(){
-    var real=Math.min(1,done/total);
-    shown=Math.max(shown,real);       // прогресс не откатывается назад
-    l.style.setProperty('--p',shown.toFixed(3));
+    l.style.setProperty('--p',shown.toFixed(4));
     if(pctEl) pctEl.textContent=Math.round(shown*100);
   }
-  function step(){ done++; paint(); }
-  function finish(){
-    if(finished) return; finished=true;
-    done=total; shown=1; paint();     // машина доезжает до конца
-    setTimeout(function(){l.classList.add('done');},520);
+  function tick(now){
+    var real=Math.min(1,done/total);
+    var creep=Math.min(.9,(now-t0)/9000);      // ползёт сам, пока ресурсы грузятся
+    target=Math.max(target,real,finished?1:creep);
+    shown+=(target-shown)*0.07;                 // плавная догонялка, без рывков
+    if(target-shown<0.001) shown=target;
+    paint();
+    if(!(finished&&shown>0.999)) requestAnimationFrame(tick);
+    else setTimeout(function(){l.classList.add('done');},420);
   }
+  function step(){ done++; }
+  function finish(){ if(finished) return; finished=true; done=total; }
 
   imgs.forEach(function(i){
     if(i.complete) step();
     else{ i.addEventListener('load',step,{once:true}); i.addEventListener('error',step,{once:true}); }
   });
-  paint();
+  requestAnimationFrame(tick);
 
   if(document.readyState==='complete') finish(); else addEventListener('load',finish);
   setTimeout(finish,6000);            // страховка, если что-то не догрузилось
